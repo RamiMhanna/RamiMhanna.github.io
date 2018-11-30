@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Source Code Management</title>
+    <style type="text/css">
+      #introduction {
+        width: 800px;
+      }
+      table{
+        text-align: center;
+        border: 2px solid black;
+        border-collapse: collapse;
+      }
+      tr,th,td{
+        border: 2px solid black;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Source Code Management - SCM</h1>
+
+    <div id="introduction">
+      <h2>Distributed Version Control System</h2>
+      <p>Imagine working on your application. You might have a project that’s developing the next release, one for ongoing day to day maintenance, one for a minor enhancement, a few bug fixes happening, and one for a new feature being added to the
+        existing version.</p>
+      <p>That’s ok as long as the programs you are changing don’t overlap much. Wait, we said new release work is being done. Unless you are renaming everything you work on, I think there might be a lot of overlap in that project.</p>
+      <p>In the scenario above, pessimistic checkout can work, but in the end, you’ll feel like a trained poodle after all the hoops you’ll need to jump through. If you enjoy being a trained poodle, you can stop reading here, if you’d like to hear
+        about a better way? follow me &darr;.</p>
+
+    </div>
+    <div class="content">
+      <p><img src="source-code-management-scenario.png" alt="Source Code Management Scenario"></p>
+
+    </div>
+
+    <div class="summery">
+      <h2>Summary</h2>
+      <table>
+        <tr>
+          <th>Command</th>
+          <th>Discription</th>
+        </tr>
+        <tr>
+          <td><pre>git config --global user.email</pre></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><pre>git config --global user.name</pre></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><pre>git add</pre></td>
+          <td>copy the file from the working directory to the git index</td>
+        </tr>
+        <tr>
+          <td><pre>git commit</pre></td>
+          <td>copy the files from the git index to the repository</td>
+        </tr>
+        <tr>
+          <td><pre>git inti</pre></td>
+          <td>we run it once, to intialize a new git repository</td>
+        </tr>
+        <tr>
+          <td><pre>git status</pre></td>
+          <td>to know the exact status to the git repository</td>
+        </tr>
+        <tr>
+          <td><pre>git add</pre> < file name >	</td>
+          <td>add this file to the index</td>
+        </tr>
+        <tr>
+          <td><pre>git rm --cached </pre>< file name >	</td>
+          <td>remove this file from the index(the cache)</td>
+        </tr>
+        <tr>
+          <td><pre>git commit -m "</pre>massege you want to commit<pre>"</pre></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><pre>git log  </pre></td>
+          <td>	show you the history of your commits</td>
+        </tr>
+        <tr>
+          <td><pre>git check --</pre>< filename > </td>
+          <td>"Discard changes in working directory"</td>
+        </tr>
+        <tr>
+          <td><pre>git diff  </pre></td>
+          <td>show the difference between the file in the repository and the other in the working directory</td>
+        </tr>
+        <tr>
+          <td><pre>git commit -a</pre></td>
+          <td>told the Git to add and commit all the files that modified</td>
+        </tr>
+        <tr>
+          <td><pre>git diff --cached </pre></td>
+          <td>show the difference between the index and the repository</td>
+        </tr>
+
+      </table>
+    </div>
+
+    <div class="">
+      <h2>Notes:</h2>
+      <p>you can have multiple repositroies.</p>
+      <p>if git is paying attention to a file then we say that git is tracking the file.</p>
+      <p>"git add"  told the Git about the specific file "so it know about it."</p>
+      <p>cashe - stage = index.</p>
+      <p>repo = repository.</p>
+    </div>
+    <p><a href="index.html">Go Back to the Homepage</a></p>
+
+  </body>
+
+</html>
