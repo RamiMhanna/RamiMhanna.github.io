@@ -24,9 +24,17 @@ p em{
 
 }
 .warning{
-
+background-color: red;
+border-radius: 5px;
+color: white;
+padding: .5em 1em;
+text-shadow: 1px 1px 1px black;
+font-style: bold;
 }
-#footer{
+p.warning::before{
+  content: "WARNING!:"
+}
+p#footer{
   border-top: 1px solid black;
   background-color: white;
   padding-top: .5em;
