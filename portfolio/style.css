@@ -1,5 +1,7 @@
 body{
   background-color: #EEEFEE;
+  font-family: Helvetica;
+
 }
 
 #personal{
@@ -9,6 +11,15 @@ body{
   padding-left: 2em;
   padding-bottom: 1em;
   margin-bottom: 1em;
+  height: 270px;
+}
+.personal1{
+  float: left;
+}
+.personal2{
+position:sticky;
+padding-top: 50px;
+padding-left: 800px;
 }
 .name{
   color:#BEAC8C;
@@ -26,6 +37,7 @@ h1{
 }
 h2 {
   color:#778BA9;
+  font-family: 'EB Garamond';
 }
 img{
   border: 2px solid #3E486A;
