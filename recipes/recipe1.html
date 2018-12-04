@@ -4,16 +4,64 @@
   <head>
     <meta charset="utf-8">
     <title>Simple White Cake</title>
+    <style media="screen">
+    body{
+      width: 1000px;
+      background-color: rgba(215,211, 202, 0.5);
+      margin: auto;
+    }
+      #header{
+        text-align: center;
+      }
+      img{
+        border: 1px solid #c3c3c3;
+        border-radius: 10px;
+        box-shadow: 2px 4px;
+      }
+      #ingredients{
+        background-color: rgba(215,211, 202, 0.9);
+        border: 1px solid #c3c3c3;
+        border-radius: 10px;
+        font-size: 1.3em;
+        box-shadow: 2px 4px;
+        padding: 15px;
+        margin: 10px;
+      }
+      #directions{
+        background-color: rgba(215,211, 202, 0.9);
+        font-size: 1.3em;
+        border: 1px solid #c3c3c3;
+        border-radius: 10px;
+        box-shadow: 2px 4px;
+        padding: 15px;
+        margin: 10px;
+
+      }
+      #tip{
+        background-color: rgba(215,211, 202, 0.9);
+        font-size: 1.1em;
+        border: 1px solid #c3c3c3;
+        border-radius: 10px;
+        box-shadow: 2px 4px;
+        padding: 15px;
+        margin: 10px;
+
+      }
+      #footer{
+        padding: 15px;
+        text-align: center;
+      }
+    </style>
   </head>
 
   <body>
 
-    <div class="header">
+    <div id="header">
       <h1>Simple White Cake</h1>
       <p><img src="cake1.jpg" alt="Simple White Cake" title="Simple White Cake"></p>
     </div>
 
-    <div class="ingredients">
+    <div id="ingredients">
       <h2>Ingredients</h2>
       <ul>
         <li>1 cup <em>white sugar</em></li>
@@ -26,7 +74,7 @@
       </ul>
     </div>
 
-    <div class="directions">
+    <div id="directions">
       <h2>Directions</h2>
       <ul>
         <li><span id="prepare">Prepare : <span>20 min</span> |</span><span id="cook"> Cook : <span>30 min</span> |</span><span id="ready"> Ready In : <span>50 min</span></span></li>
@@ -49,12 +97,12 @@
 
     </div>
 
-    <div class="tip">
+    <div id="tip">
       <p><i>Tip</i></p>
       <p>Aluminum foil can be used to keep food moist, cook it evenly, and make clean-up easier.</p>
     </div>
 
-    <div>
+    <div id="footer">
       <h3><em>Gute Abetit</em></h3>
     </div>
   </body>

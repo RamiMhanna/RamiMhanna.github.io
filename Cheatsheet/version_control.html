@@ -4,116 +4,289 @@
   <head>
     <meta charset="utf-8">
     <title>Source Code Management</title>
-    <style type="text/css">
-      #introduction {
-        width: 800px;
-      }
-      table{
-        text-align: center;
-        border: 2px solid black;
-        border-collapse: collapse;
-      }
-      tr,th,td{
-        border: 2px solid black;
-      }
-
-    </style>
+    <link rel="stylesheet" href="version_control.css" type="text/css">
   </head>
 
   <body>
-    <h1>Source Code Management - SCM</h1>
+    <h1>The Version Control</h1>
 
-    <div id="introduction">
-      <h2>Distributed Version Control System</h2>
-      <p>Imagine working on your application. You might have a project that’s developing the next release, one for ongoing day to day maintenance, one for a minor enhancement, a few bug fixes happening, and one for a new feature being added to the
-        existing version.</p>
-      <p>That’s ok as long as the programs you are changing don’t overlap much. Wait, we said new release work is being done. Unless you are renaming everything you work on, I think there might be a lot of overlap in that project.</p>
-      <p>In the scenario above, pessimistic checkout can work, but in the end, you’ll feel like a trained poodle after all the hoops you’ll need to jump through. If you enjoy being a trained poodle, you can stop reading here, if you’d like to hear
-        about a better way? follow me &darr;.</p>
+    <div id="all">
+      <h2>Distributed Version Control System - (DVCS)</h2>
 
+      <div id="introduction">
+        <p>Imagine working on your application. You might have a project that’s developing the next release, one for ongoing day to day maintenance, one for a minor enhancement, a few bug fixes happening, and one for a new feature being added to the
+          existing version.</p>
+        <p>That’s ok as long as the programs you are changing don’t overlap much. Wait, we said new release work is being done. Unless you are renaming everything you work on, I think there might be a lot of overlap in that project.</p>
+        <p>In the scenario above, pessimistic checkout can work, but in the end, you’ll feel like a trained poodle after all the hoops you’ll need to jump through. If you enjoy being a trained poodle, you can stop reading here, if you’d like to hear
+          about a better way? follow me &darr;.</p>
+      </div>
+
+      <div class="content">
+        <img class="contentimg" src="source-code-management-scenario.png" alt="Source Code Management Scenario">
+        <h2>Common Feature</h2>
+        <ul>
+          <li>Lets us take a collection of files and save their current contents</li>
+          <li>Saving is called "committing" the changes
+            <ul>
+              <li>When we commit the changes we can provide a message that explains why</li>
+            </ul>
+          </li>
+          <li>Then we can make changes to the files and:
+            <ul>
+              <li>See what's changed (diff)</li>
+              <li>Easily undo the changes (or some of them)</li>
+              <li>Or commit these as new versions of the files</li>
+            </ul>
+          </li>
+          <li>Over time this builds up a timeline of changes to the files</li>
+        </ul>
+        <h3>Git fundamentals</h3>
+        <p><b>Three locations:</b> Working directory, index, repository</p>
+        <p>Git commands copy files between these locations</p>
+      </div>
+
+      <div id="summery">
+        <h2>Summary</h2>
+        <table>
+          <col width="450">
+          <col width="680">
+          <tr>
+            <th>Command</th>
+            <th>Discription</th>
+          </tr>
+          <tr>
+            <td><code>git config --global user.email</code></td>
+            <td>connect the Git to an E-mail address</td>
+          </tr>
+          <tr>
+            <td><code>git config --global user.name</code></td>
+            <td>connect the Git to a user name</td>
+          </tr>
+          <tr>
+            <td><code>git add</code></td>
+            <td>copy the file from the working directory to the git index</td>
+          </tr>
+          <tr>
+            <td><code>git commit</code></td>
+            <td>move the files from the git index to the repository</td>
+          </tr>
+          <tr>
+            <td><code>git inti</code></td>
+            <td>we run it once, to intialize a new git repository</td>
+          </tr>
+          <tr>
+            <td><code>git status</code></td>
+            <td>to know the exact status to the git repository</td>
+          </tr>
+          <tr>
+            <td><code>git add</code> &lt;file name&gt; </td>
+            <td>add this file to the index</td>
+          </tr>
+          <tr>
+            <td><code>git rm --cached </code>&lt; file name&gt; </td>
+            <td>remove this file from the index(the cache)</td>
+          </tr>
+          <tr>
+            <td><code>git commit -m "</code>massege you want to commit<code>"</code></td>
+            <td>move the files to the repository and add a comment to explain what did you modifie here </td>
+          </tr>
+          <tr>
+            <td><code>git log </code></td>
+            <td> show you the history of your commits</td>
+          </tr>
+          <tr>
+            <td><code>git check --</code>&lt;filename&gt;</td>
+            <td>"Discard changes in working directory"</td>
+          </tr>
+          <tr>
+            <td><code>git diff </code></td>
+            <td>show the difference between the file in the repository and the other in the working directory</td>
+          </tr>
+          <tr>
+            <td><code>git commit -a</code></td>
+            <td>told the Git to add and commit all the files that modified</td>
+          </tr>
+          <tr>
+            <td><code>git diff --cached </code></td>
+            <td>show the difference between the index and the repository</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="content1">
+        <h2>The First Beginning with Git</h2>
+        <h3><code>git config</code> </h3>
+        <p>git config --global user.email example@example.example</p>
+        <p>git config --global user.name "example"</p>
+        <h3><code>git init</code></h3>
+        <p>We have to tell Git where the "root" of the repository is.</p>
+        <p>Everything below this directory can be managed by Git.</p>
+        <p>It's possible to have multiple repositories on the computer,</p>
+        <p>but don't put a repository inside another</p>
+        <h3><code>git status</code></h3>
+        <p>What's the state of the repository?</p>
+        <p>with <code>git status</code> we can know the exact status of the our git's repository</p>
+        <h3><code>git add</code></h3>
+        <ul>
+          <li>git add tells Git to copy the file to the index
+            <ul>
+              <li>If the file is untracked it also starts tracking it</li>
+            </ul>
+          </li>
+          <li>This does not commit the file to the repository</li>
+        </ul>
+        <h3><code>git commit</code> </h3>
+        <p>Takes all the added changes, bundles them up, saves them</p>
+        <p>You provide a description, called the commit message</p>
+      </div>
+
+      <div class="content2">
+        <h2>Typical Git workflow</h2>
+        <ol>
+          <li>Edit one or more files to make your change</li>
+          <li>Copy the files to the index, with <code>git add</code></li>
+          <li>Review the changes in the index
+            <ul>
+              <li>Double check everything is included</li>
+              <li>Remove files not related to this change</li>
+            </ul>
+          </li>
+          <li>Copy the files to the repository, with <code>git commit</code></li>
+        </ol>
+        <p><img src="workflow.png" alt="The Typical Workflow" width="455" height="485"> </p>
+      </div>
+
+      <div id="screenshots">
+
+        <div class="fade">
+
+          <div class="number">
+            1 / 6
+          </div>
+          <img class="img1" src="screenshot.png" alt="" width="600" height="500">
+
+          <div class="description">
+            <p>Setting the Git's configration (Email & username)</p>
+          </div>
+
+        </div>
+
+        <div class="fade">
+
+          <div class="number">
+            2 / 6
+          </div>
+          <img class="img1" src="screenshot1.png" alt="" width="600" height="500">
+
+          <div class="description">
+            <p>Initialize the root of the repository</p>
+          </div>
+
+        </div>
+
+        <div class="fade">
+
+          <div class="number">
+            3 / 6
+          </div>
+          <img class="img1" src="screenshot2.png" alt="" width="600" height="500">
+
+          <div class="description">
+            <p>check the status of the repository</p>
+          </div>
+
+        </div>
+
+        <div class="fade">
+
+          <div class="number">
+            4 / 6
+          </div>
+          <img class="img1" src="screenshot3.png" alt="" width="600" height="500">
+
+          <div class="description">
+            <p>Adding HTML file to the index</p>
+          </div>
+
+        </div>
+
+        <div class="fade">
+
+          <div class="number">
+            5 / 6
+          </div>
+          <img class="img1" src="screenshot4.png" alt="" width="600" height="500">
+
+          <div class="description">
+            <p>Commiting the HTML file to the repository</p>
+          </div>
+
+        </div>
+
+        <div class="fade">
+
+          <div class="number">
+            6 / 6
+          </div>
+          <img class="img1" src="screenshot5.png" alt="" width="600" height="500">
+
+          <div class="description">
+            <p>Show the history of the commits</p>
+          </div>
+
+        </div>
+        <a class="prev" onclick="nextphoto(-1)">Prev</a>
+        <a class="next" onclick="nextphoto(+1)">Next</a>
+      </div>
+
+      <div class="diff">
+        <h3>Making and committing a change</h3>
+        <p>let's assume that we have added some other contents and remove some others.</p>
+        <p>For Example, let;s add two Paragraphs <code>&lt;p&gt;</code> and modifie one list Element <code>&lt;li&gt;</code> and delete one <code>&lt;div&gt;</code> block </p>
+        <p>Now after saving the changes that we have made in the working directory, we can compare the old file in the repository</p>
+        <p>with the new version in the working directory, and we can achieve that by running the command <code>git diff</code> </p>
+      </div>
+
+      <div class="notes">
+        <h2>Notes:</h2>
+        <p>you can have multiple repositroies.</p>
+        <p>if git is paying attention to a file then we say that git is tracking the file.</p>
+        <p>"git add" told the Git about the specific file "so it know about it."</p>
+        <p>cashe - stage = index.</p>
+        <p>repo = repository.</p>
+      </div>
+
+      <div class="links">
+        <p><a href="index.html">Go Back to the Homepage</a></p>
+      </div>
     </div>
-    <div class="content">
-      <p><img src="source-code-management-scenario.png" alt="Source Code Management Scenario"></p>
+    <script>
+      var index = 1;
+      display_screen(index);
 
-    </div>
+      function nextphoto(x) {
+        display_screen(index += x)
+      }
 
-    <div class="summery">
-      <h2>Summary</h2>
-      <table>
-        <tr>
-          <th>Command</th>
-          <th>Discription</th>
-        </tr>
-        <tr>
-          <td><pre>git config --global user.email</pre></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><pre>git config --global user.name</pre></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><pre>git add</pre></td>
-          <td>copy the file from the working directory to the git index</td>
-        </tr>
-        <tr>
-          <td><pre>git commit</pre></td>
-          <td>copy the files from the git index to the repository</td>
-        </tr>
-        <tr>
-          <td><pre>git inti</pre></td>
-          <td>we run it once, to intialize a new git repository</td>
-        </tr>
-        <tr>
-          <td><pre>git status</pre></td>
-          <td>to know the exact status to the git repository</td>
-        </tr>
-        <tr>
-          <td><pre>git add</pre> < file name >	</td>
-          <td>add this file to the index</td>
-        </tr>
-        <tr>
-          <td><pre>git rm --cached </pre>< file name >	</td>
-          <td>remove this file from the index(the cache)</td>
-        </tr>
-        <tr>
-          <td><pre>git commit -m "</pre>massege you want to commit<pre>"</pre></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><pre>git log  </pre></td>
-          <td>	show you the history of your commits</td>
-        </tr>
-        <tr>
-          <td><pre>git check --</pre>< filename > </td>
-          <td>"Discard changes in working directory"</td>
-        </tr>
-        <tr>
-          <td><pre>git diff  </pre></td>
-          <td>show the difference between the file in the repository and the other in the working directory</td>
-        </tr>
-        <tr>
-          <td><pre>git commit -a</pre></td>
-          <td>told the Git to add and commit all the files that modified</td>
-        </tr>
-        <tr>
-          <td><pre>git diff --cached </pre></td>
-          <td>show the difference between the index and the repository</td>
-        </tr>
+      function currentphoto(x) {
+        display_screen(x)
+      }
 
-      </table>
-    </div>
-
-    <div class="">
-      <h2>Notes:</h2>
-      <p>you can have multiple repositroies.</p>
-      <p>if git is paying attention to a file then we say that git is tracking the file.</p>
-      <p>"git add"  told the Git about the specific file "so it know about it."</p>
-      <p>cashe - stage = index.</p>
-      <p>repo = repository.</p>
-    </div>
-    <p><a href="index.html">Go Back to the Homepage</a></p>
-
+      function display_screen(x) {
+        var i = 0;
+        var photo = document.getElementsByClassName("fade");
+        if (x > photo.length) {
+          index = 1;
+        }
+        if (x < 1) {
+          index = photo.length;
+        }
+        for (i = 0; i < photo.length; i++) {
+          photo[i].style.display = "none";
+        }
+        photo[index - 1].style.display = "block";
+      }
+    </script>
   </body>
 
 </html>
