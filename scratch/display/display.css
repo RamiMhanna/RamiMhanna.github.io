@@ -1,0 +1,24 @@
+
+p{
+  border: .3em solid rgba(212,123,143,0.4);
+  margin: .2em;
+  padding: .1em;
+}
+.inline{
+  display: inline;
+  border: .3em solid black;
+  margin: .2em;
+  padding: .1em;
+}
+.block{
+  display: block;
+    border: .3em solid black;
+    margin: .2em;
+    padding: .1em;
+}
+.inline-block{
+  display: inline-block;
+    border: .3em solid black;
+    margin: .2em;
+    padding: .1em;
+}
