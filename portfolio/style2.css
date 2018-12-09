@@ -1,0 +1,17 @@
+.personal2{
+position: absolute;
+top: 80px;
+left: 60px;
+border: 2px solid darkblue;
+margin: 5px;
+}
+#personal{
+float: right;
+border: 1px solid darkblue;
+margin: 5px;
+
+}
+.education{
+  border: 1px solid darkblue;
+  margin: 5px;
+}
