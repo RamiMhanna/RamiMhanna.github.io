@@ -1,0 +1,34 @@
+body {
+  position: relative;
+}
+
+div {
+  border: 1px solid black;
+  background-color: rgba(238, 238, 238);
+  padding: .5em;
+}
+
+#content, #secondery, #tertiary {
+  min-height: 50vh;
+  position: absolute;
+}
+
+#content {
+  left: 18em;
+  width: calc(100% - 37em);
+}
+
+#header {
+  margin: 1em;
+}
+
+#secondery {
+  left: 1em;
+  width: 15em;
+}
+
+#tertiary {
+  right: 1em;
+  width: 15em;
+
+}
