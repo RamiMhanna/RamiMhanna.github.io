@@ -1,0 +1,32 @@
+* {
+  border: .5em solid rgba(0, 0, 0, 0.5);
+}
+
+html {
+  background-color: lightblue;
+  border: .em solid purple;
+}
+
+body {
+  background-color: green;
+  border: .5em solid yellow;
+}
+
+p, li, em {
+  color: white;
+  padding:.5em;
+  margin: .5em;
+}
+
+ul {
+  background-color: gray;
+  border-color: darkgray;
+}
+
+p {
+  background-color: blue;
+}
+
+li {
+  background-color: red;
+}
