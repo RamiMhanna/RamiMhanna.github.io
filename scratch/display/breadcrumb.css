@@ -1,42 +1,18 @@
-
 ul.breadcrumb {
   padding-left: 0;
   display:inline;
   background-color: lightgray;
 }
-ul.breadcrumb li{
+
+ul.breadcrumb li {
   display: inline;
   padding-left: 0;
 }
-ul.breadcrumb li::before{
+
+ul.breadcrumb li::before {
   content: " > "
 }
-ul.breadcrumb li:first-child::before{
+
+ul.breadcrumb li:first-child::before {
 content: "";
 }
-  /*
-  ul.breadcrumb li{
-  display: inline;
-  color: White;
-  background-color: rgba(34, 0, 255, 0.8);
-  list-style: none;
-  border-radius:5px;
-  margin:0px;
-  padding: 4px;
-  border: 1px groove rgba(34, 0, 255, 1);
-  box-shadow: 1px 1px gray;
-}
-
-
-ul.breadcrumb li:hover{
-  color: White;
-  display: inline-block;
-  background-color: rgba(34, 0, 255, 0.5);
-  list-style: none;
-  border-radius:5px;
-  margin:0px;
-  padding: 4px;
-  border: 1px groove rgba(34, 0, 255, 1);
-  box-shadow: 2px 2px darkgray;
-}
-*/
