@@ -1,81 +1,92 @@
-body{
+body {
   background-color: #EEEFEE;
   font-family: Helvetica;
-
+  position: relative;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
-#personal{
+#knowledge, #languages, #qualification, #personal, #header, .education {
+  padding-bottom: 1em;
   border: 1px solid #3E486A;
   border-radius: 10px;
   box-shadow: 2px 4px 1px #778BA9;
-  padding-left: 2em;
-  padding-bottom: 1em;
   margin-bottom: 1em;
-  height: 270px;
+  padding-left: 1em;
 }
-.personal1{
-  float: left;
+
+#header {
+  padding-left: 2em;
+  width: 57em;
 }
-.personal2{
-position:sticky;
-padding-top: 50px;
-padding-left: 800px;
+
+#personal {
+  padding-right: 1em;
+  position:absolute;
+  top:7.1em;
+  left: 33.3em;
 }
-.name{
+
+#qualification {
+  padding-left: 2em;
+  position: absolute;
+  top: 64.3em;
+  left: 33.3em;
+  width: 23.7em;
+}
+
+#languages {
+  padding-left: 2em;
+  width: 30em;
+}
+
+#knowledge {
+  padding-right: 8.6em;
+  position: absolute;
+  top:27.3em;
+  left: 33.3em;
+}
+
+.educationallevel, .jobtitle {
+  padding-left: 60px;
+}
+
+.education {
+  padding-right: 1em;
+  width:30em;
+}
+
+.name {
   color:#BEAC8C;
 }
-a{
+
+a {
   color:#BEAC8C;
 }
-a:hover{
+
+a:hover {
   color:#3E486A;
 }
-h1{
+
+h1 {
   color:#3E486A;
   text-align: center;
   text-decoration: underline;
 }
+
 h2 {
   color:#778BA9;
   font-family: 'EB Garamond';
 }
-img{
+
+img {
   border: 2px solid #3E486A;
   border-radius: 10px;
   box-shadow: 2px 4px 2px #778BA9;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.education{
-  border: 1px solid #3E486A;
-  border-radius: 10px;
-  box-shadow: 2px 4px 1px #778BA9;
-  padding-left: 2em;
-  padding-bottom: 1em;
-  margin-bottom: 1em;
-}
-#qualification{
-  border: 1px solid #3E486A;
-  border-radius: 10px;
-  box-shadow: 2px 4px 1px #778BA9;
-  padding-left: 2em;
-  padding-bottom: 1em;
-  margin-bottom: 1em;
-}
-#languages{
-  border: 1px solid #3E486A;
-  border-radius: 10px;
-  box-shadow: 2px 4px 1px #778BA9;
-  padding-left: 2em;
-  padding-bottom: 1em;
-  margin-bottom: 1em;
-}
-#knowledge{
-  border: 1px solid #3E486A;
-  border-radius: 10px;
-  box-shadow: 2px 4px 1px #778BA9;
-  padding-left: 2em;
-  padding-bottom: 1em;
-  margin-bottom: 1em;
+  display: inline-block;
+  width: 6em;
+  height: 8em;
+  position: absolute;
+  top:7.7em;
+  left:51.8em;
 }
