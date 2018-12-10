@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Introductory CSS</title>
+    <link rel="stylesheet" type="text/css" href="css.css" />
+  </head>
+
+  <body>
+    <div id="all_content">
+      <h1>Introductory CSS</h1>
+
+      <div id="recap">
+        <h2><span>1</span> Recap</h2>
+
+        <div>
+          <ul>
+            <li>Files and directories</li>
+            <li>HTML
+              <ul>
+                <li>Elements, attributes, structure</li>
+              </ul>
+            </li>
+            <li>The command line</li>
+            <li>Version control with Git</li>
+            <li>Your cheatsheets</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="goals">
+        <h2><span>2</span> Goals for today</h2>
+
+        <div>
+          <ul>
+            <li>Introducing CSS</li>
+            <li>More experience with version control</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="styling">
+        <h2><span>3</span> Introducing styling to the web</h2>
+
+        <div>
+          <ul>
+            <li>HTML says "What it is", not "What it should look like"</li>
+            <li>Mostly&#x2026;</li>
+            <li><b>Cascading Style Sheets</b> (CSS) say what it should look like</li>
+            <li>"This element&#x2026;"
+              <ul>
+                <li>"&#x2026; or these elements&#x2026;"</li>
+                <li>"&#x2026; should look like this"</li>
+              </ul>
+            </li>
+            <li>These are CSS <b>rules</b></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="rules4">
+        <h2><span>4</span> A CSS rule</h2>
+
+        <div>
+
+          <div>
+            <pre><code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-weight</span>: bold;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">margin-left</span>: 2em;</code>
+<code>}</code>
+</pre>
+          </div>
+        </div>
+      </div>
+      <div id="rules5">
+        <h2><span>5</span> A CSS rule</h2>
+        <div>
+          <div>
+            <pre><code><span>selector </span>{</code>
+<code>  property_1: value_1;</code>
+<code>  property_2: value_2;</code>
+<code>  property_3: value_3;</code>
+<code>  ...</code>
+<code>}</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="adding">
+        <h2><span>6</span> Adding CSS to the scratch file</h2>
+        <div>
+          <ul>
+            <li>Create <code>scratch/style.css</code></li>
+            <li>Create <code>scratch/css.html</code></li>
+          </ul>
+          <div>
+            <pre>
+<code><span style="color: #CC9393;">&lt;!DOCTYPE html&gt;</span></code>
+<code>&lt;<span style="color: #93E0E3;">html</span>&gt;</code>
+<code>  &lt;<span style="color: #93E0E3;">head</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">title</span>&gt;<span style="font-weight: bold;">CSS examples</span>&lt;/<span style="color: #93E0E3;">title</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">link</span> <span style="color: #DFAF8F;">rel</span>=<span style="color: #CC9393;">"stylesheet"</span> <span style="color: #DFAF8F;">type</span>=<span style="color: #CC9393;">"text/css"</span> <span style="color: #DFAF8F;">href</span>=<span style="color: #CC9393;">"style.css"</span>&gt;</code>
+<code>  &lt;/<span style="color: #93E0E3;">head</span>&gt;</code>
+<code></code>
+<code>  &lt;<span style="color: #93E0E3;">body</span>&gt;</code>
+<code>  &lt;/<span style="color: #93E0E3;">body</span>&gt;</code>
+<code>&lt;/<span style="color: #93E0E3;">html</span>&gt;</code>
+            </pre>
+          </div>
+        </div>
+
+        <div>
+          <h3><span>6.1</span> Don't forget to add and commit</h3>
+          <div>
+            <div>
+              <pre><code>git add scratch/style.css</code>
+<code>git add scratch/css.html</code>
+<code>git commit -m <span style="color: #CC9393;">"..."</span></code>
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3><span>6.2</span> Add some HTML content</h3>
+          <div>
+            <div>
+              <pre><code>&lt;<span style="color: #93E0E3;">body</span>&gt;</code>
+<code>  &lt;<span style="color: #93E0E3;">h1</span>&gt;<span style="font-weight: bold;">A heading</span>&lt;/<span style="color: #93E0E3;">h1</span>&gt;</code>
+<code></code>
+<code>  &lt;<span style="color: #93E0E3;">p</span>&gt;A paragraph of text. It has some &lt;<span style="color: #93E0E3;">em</span>&gt;<span style="font-style: italic;">emphasised content</span>&lt;/<span style="color: #93E0E3;">em</span>&gt;.&lt;/<span style="color: #93E0E3;">p</span>&gt;</code>
+<code></code>
+<code>  &lt;<span style="color: #93E0E3;">ul</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">li</span>&gt;Bread&lt;/<span style="color: #93E0E3;">li</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">li</span>&gt;Milk (&lt;<span style="color: #93E0E3;">em</span>&gt;<span style="font-style: italic;">Low fat</span>&lt;/<span style="color: #93E0E3;">em</span>&gt;)&lt;/<span style="color: #93E0E3;">li</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">li</span> <span style="color: #DFAF8F;">class</span>=<span style="color: #CC9393;">"important"</span>&gt;Eggs&lt;/<span style="color: #93E0E3;">li</span>&gt;</code>
+<code>  &lt;/<span style="color: #93E0E3;">ul</span>&gt;</code>
+<code></code>
+<code>  &lt;<span style="color: #93E0E3;">p</span> <span style="color: #DFAF8F;">class</span>=<span style="color: #CC9393;">"warning"</span>&gt;This is a warning.&lt;/<span style="color: #93E0E3;">p</span>&gt;</code>
+<code></code>
+<code>  &lt;<span style="color: #93E0E3;">p</span> <span style="color: #DFAF8F;">id</span>=<span style="color: #CC9393;">"footer"</span>&gt;This paragraph is a footer.&lt;/<span style="color: #93E0E3;">p</span>&gt;</code>
+<code>&lt;/<span style="color: #93E0E3;">body</span>&gt;</code>
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3><span>6.3</span> Add some HTML content</h3>
+        </div>
+
+        <div>
+          <h3><span>6.4</span> Add and commit!</h3>
+
+          <div>
+
+            <div>
+              <p>
+                Don't forget to add and commit the changes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="selectors">
+        <h2><span>7</span> CSS Selectors</h2>
+
+        <div>
+        </div>
+
+        <div>
+          <h3><span>7.1</span> Selecting all elements of a particular type</h3>
+
+          <div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #d3d3d3;">lightgrey</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">margin-left</span>: 1em;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">margin-right</span>: 1em;</code>
+<code>}</code>
+</pre>
+            </div>
+
+            <ul>
+              <li>
+                <p>
+                  Check, add, and commit
+                </p>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3><span>7.2</span> Selecting one element using <code>id</code></h3>
+
+          <div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">p#footer </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">border-top</span>: 1px solid <span style="color: #ffffff; background-color: #000000;">black</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #ffffff;">white</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">padding-top</span>: .5em;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">margin-left</span>: 0;</code>
+<code>}</code>
+<code></code>
+<code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #d3d3d3;">lightgrey</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">margin-left</span>: 1em;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">margin-right</span>: 1em;</code>
+<code>}</code>
+</pre>
+            </div>
+
+            <ul>
+              <li>Check, add, and commit</li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div>
+          <h3><span>7.3</span> Selecting elements based on container</h3>
+
+          <div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">em </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-style</span>: normal;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-decoration</span>: underline;</code>
+<code>}</code>
+<code></code>
+<code><span style="color: #93E0E3;">p#footer </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">border-top</span>: 1px solid <span style="color: #ffffff; background-color: #000000;">black</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #ffffff;">white</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">padding-top</span>: .5em;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">margin-left</span>: 0;</code>
+<code>}</code>
+<code></code>
+<code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #d3d3d3;">lightgrey</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">margin-left</span>: 1em;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">margin-right</span>: 1em;</code>
+<code>}</code>
+</pre>
+            </div>
+
+            <ul>
+              <li>Check, add, and commit</li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div>
+          <h3><span>7.4</span> Styling elements based on container</h3>
+
+          <div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">p em </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-style</span>: normal;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-decoration</span>: underline;</code>
+<code>}</code>
+<code></code>
+<code><span style="color: #93E0E3;">p#footer </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">border-top</span>: 1px solid <span style="color: #ffffff; background-color: #000000;">black</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #ffffff;">white</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">padding-top</span>: .5em;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">margin-left</span>: 0;</code>
+<code>}</code>
+<code></code>
+<code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #d3d3d3;">lightgrey</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">margin-left</span>: 1em;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">margin-right</span>: 1em;</code>
+<code>}</code>
+</pre>
+            </div>
+
+            <ul>
+              <li>Check, add, and commit</li>
+            </ul>
+
+            <div>
+              <p><img src="styling-elements-based-on-container.png" alt="styling-elements-based-on-container.png" />
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <div>
+          <h3><span>7.5</span> Styling all elements of particular class</h3>
+
+          <div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">p.warning </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">background-color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">color</span>: <span style="color: #000000; background-color: #ffffff;">white</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-style</span>: bold;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">padding</span>: .5em 1em;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">border-radius</span>: 5px;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-shadow</span>: 1px 1px 1px <span style="color: #ffffff; background-color: #000000;">black</span>;</code>
+<code>}</code>
+<code></code>
+<code><span style="color: #93E0E3;">p.warning::before </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">content</span>: <span style="color: #CC9393;">"WARNING!: "</span></code>
+<code>}</code>
+<code></code>
+<code><span style="color: #93E0E3;">p em </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-style</span>: normal;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-decoration</span>: underline;</code>
+<code>}</code>
+<code></code>
+<code><span style="color: #93E0E3;">p#footer </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">border-top</span>: 1px solid <span style="color: #ffffff; background-color: #000000;">black</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #ffffff;">white</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">padding-top</span>: .5em;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">margin-left</span>: 0;</code>
+<code>}</code>
+<code></code>
+<code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #d3d3d3;">lightgrey</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">margin-left</span>: 1em;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">margin-right</span>: 1em;</code>
+<code>}</code>
+</pre>
+            </div>
+
+            <div>
+              <p><img src="styling-all-elements-of-particular-class.png" alt="styling-all-elements-of-particular-class.png" />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="id">
+        <h2><span>8</span> The <code>id</code> attribute</h2>
+
+        <div>
+          <ul>
+            <li>All elements support the <code>id</code> attribute</li>
+            <li>Value is an arbitrary string</li>
+            <li>Value <b>must</b> be unique in the HTML</li>
+            <li>Use for things that appear at most once</li>
+          </ul>
+
+          <div>
+            <pre><code>&lt;<span style="color: #93E0E3;">div</span> <span style="color: #DFAF8F;">id</span>=<span style="color: #CC9393;">"header"</span>&gt;...&lt;/<span style="color: #93E0E3;">div</span>&gt;</code>
+<code></code>
+<code>&lt;<span style="color: #93E0E3;">div</span> <span style="color: #DFAF8F;">id</span>=<span style="color: #CC9393;">"main-content"</span>&gt;...&lt;/<span style="color: #93E0E3;">div</span>&gt;</code>
+<code></code>
+<code>&lt;<span style="color: #93E0E3;">p</span>&gt;&lt;<span style="color: #93E0E3;">span</span> <span style="color: #DFAF8F;">id</span>=<span style="color: #CC9393;">"author"</span>&gt;...&lt;/<span style="color: #93E0E3;">span</span>&gt;</code>
+<code>   &lt;<span style="color: #93E0E3;">span</span> <span style="color: #DFAF8F;">id</span>=<span style="color: #CC9393;">"publish-date"</span>&gt;...&lt;/<span style="color: #93E0E3;">span</span>&gt;</code>
+<code>   &lt;<span style="color: #93E0E3;">span</span> <span style="color: #DFAF8F;">id</span>=<span style="color: #CC9393;">"category"</span>&gt;...&lt;/<span style="color: #93E0E3;">span</span>&gt;&lt;/<span style="color: #93E0E3;">p</span>&gt;</code>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="class">
+        <h2><span>9</span> The <code>class</code> attribute</h2>
+
+        <div>
+          <ul>
+            <li>All elements support the <code>class</code> attribute</li>
+            <li>Value is an arbitrary string</li>
+            <li>Value <b>does not</b> need to be unique in the HTML</li>
+            <li>Use for things that might appear multiple times</li>
+          </ul>
+
+          <div>
+            <pre><code>&lt;<span style="color: #93E0E3;">p</span> <span style="color: #DFAF8F;">class</span>=<span style="color: #CC9393;">"warning"</span>&gt;...&lt;/<span style="color: #93E0E3;">p</span>&gt;</code>
+<code></code>
+<code>&lt;<span style="color: #93E0E3;">pre</span> <span style="color: #DFAF8F;">class</span>=<span style="color: #CC9393;">"html"</span>&gt;...&lt;/<span style="color: #93E0E3;">p</span>&gt;</code>
+<code></code>
+<code>&lt;<span style="color: #93E0E3;">pre</span> <span style="color: #DFAF8F;">class</span>=<span style="color: #CC9393;">"css"</span>&gt;...&lt;/<span style="color: #93E0E3;">p</span>&gt;</code>
+<code></code>
+<code>&lt;<span style="color: #93E0E3;">img</span> <span style="color: #DFAF8F;">class</span>=<span style="color: #CC9393;">"screenshot"</span>&gt;</code>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="colors">
+        <h2><span>10</span> CSS colours</h2>
+
+        <div>
+        </div>
+
+        <div>
+          <h3><span>10.1</span> Colour theory, red, green, blue, alpha</h3>
+
+          <div>
+            <ul>
+              <li>RGBA = Red, Green, Blue, Alpha</li>
+              <li>R, G, B in range [0 - 255]
+                <ul>
+                  <li>0 = none of that colour</li>
+                  <li>255 = maximum amount of that colour</li>
+                </ul>
+              </li>
+              <li>Alpha in range [0.0 - 1.0]
+                <ul>
+                  <li>0.0 = completely transparent, 0% of the colour</li>
+                  <li>1.0 = completely opaque, 100% of the colour</li>
+                  <li>0.5 = 50% of the colour</li>
+                  <li>0.25 = 25% of the colour, etc</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3><span>10.2</span> Colour examples</h3>
+          <div>
+            <div>
+              <p><img src="colour-examples.png" alt="colour-examples.png" />
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3><span>10.3</span> CSS colour properties</h3>
+          <div>
+            <ul>
+              <li><code>color</code></li>
+              <li><code>background-color</code></li>
+              <li><code>border-color</code></li>
+              <li><code>text-decoration-color</code></li>
+              <li>&#x2026;</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3><span>10.4</span> How to specify CSS colours</h3>
+
+          <div>
+            <h4><span>10.4.1</span> Colour names</h4>
+            <div>
+              <div>
+                <pre><code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">color</span>: <span style="color: #ffffff; background-color: #000000;">black</span>;</code>
+<code>}</code>
+</pre>
+              </div>
+              <ul>
+                <li><code>black</code></li>
+                <li><code>silver</code></li>
+                <li><code>gray</code></li>
+                <li><code>white</code></li>
+                <li><code>maroon</code></li>
+                <li><code>red</code></li>
+              </ul>
+              <ul>
+                <li><code>purple</code></li>
+                <li><code>fuchsia</code></li>
+                <li><code>green</code></li>
+                <li><code>lime</code></li>
+                <li><code>olive</code></li>
+                <li><code>yellow</code></li>
+              </ul>
+              <div>
+                <p>
+                  &#x2026; and more
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>10.4.2</span> rgb(r, g, b)</h4>
+            <div>
+              <div>
+                <pre><code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">color</span>: <span style="color: #ffffff; background-color: #b93df4;">rgb(185, 61, 244)</span>; <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Royal purple </span><span style="color: #5F7F5F;">*/</span></code>
+<code>}</code>
+</pre>
+              </div>
+              <ul>
+                <li><code>rgb(red_value, green_value, blue_value)</code></li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>10.4.3</span> rgba(r, g, b, a)</h4>
+            <div>
+              <div>
+                <pre><code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">color</span>: <span style="color: #ffffff; background-color: #b93df4;">rgba(185, 61, 244, .67)</span>; <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Royal purple, 67% opaque </span><span style="color: #5F7F5F;">*/</span></code>
+<code>}</code>
+</pre>
+              </div>
+              <ul>
+                <li><code>rgb(red_value, green_value, blue_value, alpha_value)</code></li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>10.4.4</span> With hexadecimal digits</h4>
+            <div>
+              <div>
+                <pre><code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">color</span>: <span style="color: #ffffff; background-color: #b93df4;">#b93df4</span>; <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Royal purple </span><span style="color: #5F7F5F;">*/</span></code>
+<code>}</code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>10.4.5</span> Recommendation: Use <code>rgb()</code> or <code>rgba()</code></h4>
+            <div>
+              <div>
+                <p>
+                  My recommendation for you all is to use the <code>rgb()</code> or <code>rgba()</code>
+                  syntax when specifying colours, and that's what I'll be doing
+                  through the rest of the course.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>10.4.6</span> Colour picker for Atom</h4>
+            <div>
+              <ul>
+                <li><code>File</code> &gt; <code>Settings</code></li>
+                <li><code>+ Install</code></li>
+                <li>Search for <code>color-picker</code></li>
+                <li>Install it</li>
+              </ul>
+              <table>
+                <colgroup>
+                  <col />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">Windows</th>
+                    <th scope="col">OS X</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>Ctrl</code> + <code>Alt</code> + <code>c</code></td>
+                    <td><code>⌘</code> + <code>Shift</code> + <code>c</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="palettes">
+        <h2><span>11</span> Colour palettes</h2>
+        <div>
+          <ul>
+            <li>1 or 2 primary colours and variants</li>
+            <li>2 to 4 accent colours and variants</li>
+            <li>Greys</li>
+          </ul>
+          <div>
+            <p><img src="whats-in-a-color-palette-03.png" alt="whats-in-a-color-palette-03.png" />
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h3><span>11.1</span> Colour palette tools</h3>
+          <div>
+            <ul>
+              <li><a href="http://paletton.com/">Paletton</a></li>
+              <li><a href="http://colorsafe.co/">Color Safe</a></li>
+              <li><a href="https://color.adobe.com/create/color-wheel/">Adobe Color CC</a></li>
+              <li><a href="https://flatuicolors.com/">Flat UI Colors</a></li>
+            </ul>
+            <ul>
+              <li><a href="http://www.pictaculous.com/">Pictaculous</a></li>
+              <li><a href="https://material.io/collections/color/#">Google Color Collection</a></li>
+              <li><a href="https://mycolor.space/">My Color Space</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="styles">
+        <h2><span>12</span> Internal and inline styles</h2>
+        <div>
+          <div>
+            <p>
+              Internal
+            </p>
+          </div>
+
+          <div>
+            <pre><code>...</code>
+<code>&lt;<span style="color: #93E0E3;">head</span>&gt;</code>
+<code>  &lt;<span style="color: #93E0E3;">style</span>&gt;</code>
+<code>    body {</code>
+<code>      background-color: rgb(128, 128, 128);</code>
+<code>      color: rgb(0, 0, 255);</code>
+<code>      font-size: 1em;</code>
+<code>      font-family: Arial, Sans-Serif;</code>
+<code>    }</code>
+<code>  &lt;/<span style="color: #93E0E3;">style</span>&gt;</code>
+<code>&lt;/<span style="color: #93E0E3;">head</span>&gt;</code>
+<code>...</code>
+</pre>
+          </div>
+
+          <div>
+            <p>
+              Inline
+            </p>
+          </div>
+
+          <div>
+            <pre><code>&lt;<span style="color: #93E0E3;">p</span> <span style="color: #DFAF8F;">style</span>=<span style="color: #CC9393;">"margin-left: 3em; color: rgb(255, 0, 0);"</span>&gt;...&lt;/<span style="color: #93E0E3;">p</span>&gt;</code>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="fonts">
+        <h2><span>13</span> CSS fonts</h2>
+        <div>
+          <ul>
+            <li>CSS gives a lot of control over the appearance of text</li>
+            <li>Collectively, these are the <code>font-*</code> properties.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3><span>13.1</span> Font-families: Serif, sans-serif, and monospace</h3>
+          <div>
+            <div>
+              <pre><code><span style="color: #CC9393;">&lt;!DOCTYPE html&gt;</span></code>
+<code>&lt;<span style="color: #93E0E3;">html</span>&gt;</code>
+<code>  &lt;<span style="color: #93E0E3;">head</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">style</span>&gt;</code>
+<code>      h1.serif { font-family: serif; }</code>
+<code>      h1.sans { font-family: sans-serif; }</code>
+<code>      h1.mono { font-family: monospace; }</code>
+<code>    &lt;/<span style="color: #93E0E3;">style</span>&gt;</code>
+<code>  &lt;/<span style="color: #93E0E3;">head</span>&gt;</code>
+<code>  &lt;<span style="color: #93E0E3;">body</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">h1</span> <span style="color: #DFAF8F;">class</span>=<span style="color: #CC9393;">"serif"</span>&gt;<span style="font-weight: bold;">This is serif</span>&lt;/<span style="color: #93E0E3;">h1</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">h1</span> <span style="color: #DFAF8F;">class</span>=<span style="color: #CC9393;">"sans"</span>&gt;<span style="font-weight: bold;">This is sans-serif</span>&lt;/<span style="color: #93E0E3;">h1</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">h1</span> <span style="color: #DFAF8F;">class</span>=<span style="color: #CC9393;">"mono"</span>&gt;<span style="font-weight: bold;">This is monospace</span>&lt;/<span style="color: #93E0E3;">h1</span>&gt;</code>
+<code>  &lt;/<span style="color: #93E0E3;">body</span>&gt;</code>
+<code>&lt;/<span style="color: #93E0E3;">html</span>&gt;</code>
+</pre>
+            </div>
+
+            <div>
+              <p><img src="font-families-serif-sans-serif-and-monospace.png" alt="font-families-serif-sans-serif-and-monospace.png" />
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>13.1.1</span> Default fonts are set in the browser</h4>
+            <div>
+              <ul>
+                <li>chrome://settings/fonts</li>
+              </ul>
+              <div>
+                <p>
+                  When you specify just <code>serif</code>, <code>sans-serif</code>, or <code>monospace</code> the
+                  browser will use whichever font the user has configured their
+                  browser to use for that type.
+                </p>
+                <p>
+                  In Chrome if you go this URL you'll see the configuration page
+                  that lets the user decide what to use.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>13.1.2</span> A font stack</h4>
+            <div>
+              <div>
+                <pre><code><span style="color: #93E0E3;">body </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-family</span>: <span style="color: #CC9393;">'DejaVu Serif'</span>, <span style="color: #CC9393;">'Times New Roman'</span>, Times, serif;</code>
+<code>}</code>
+<code></code>
+<code><span style="color: #93E0E3;">h1, h2, h3, h4, h5, h6 </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-family</span>: <span style="color: #CC9393;">'DejaVu Sans'</span>,</code>
+<code>}</code>
+<code></code>
+<code><span style="color: #93E0E3;">pre, code, tt </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-family</span>: <span style="color: #CC9393;">'DejaVu Sans Mono'</span>, monospace;</code>
+<code>}</code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>13.1.3</span> "Web safe" fonts</h4>
+            <div>
+              <ul>
+                <li>[<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts">MDN Web Safe fonts</a>]</li>
+              </ul>
+              <table>
+                <colgroup>
+                  <col />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col"><b>Names</b> / <b>Font stack</b></th>
+                    <th scope="col"><b>Type</b></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>Helvetica, Arial</code></td>
+                    <td>sans-serif</td>
+                  </tr>
+                  <tr>
+                    <td><code>Courier New, Courier</code></td>
+                    <td>monospace</td>
+                  </tr>
+                  <tr>
+                    <td><code>Georgia</code></td>
+                    <td>serif</td>
+                  </tr>
+                  <tr>
+                    <td><code>Times New Roman, Times</code></td>
+                    <td>serif</td>
+                  </tr>
+                  <tr>
+                    <td><code>Verdana</code></td>
+                    <td>sans-serif</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>13.1.4</span> Downloadable fonts</h4>
+            <div>
+              <div>
+                <pre><code><span style="color: #DCDCCC; font-weight: bold;">@font-face</span> {</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-family</span>: <span style="color: #CC9393;">'Open Sans'</span>;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">src</span>: local(<span style="color: #CC9393;">'OpenSans Regular'</span>),</code>
+<code>       url(<span style="color: #CC9393;">'/fonts/OpenSans-Regular-webfont.woff2'</span>) format(<span style="color: #CC9393;">'woff2'</span>),</code>
+<code>       url(<span style="color: #CC9393;">'/fonts/OpenSans-Regular-webfont.woff'</span>) format(<span style="color: #CC9393;">'woff'</span>);</code>
+<code>}</code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>13.1.5</span> The Google Fonts site</h4>
+            <div>
+              <div>
+                <p>
+                  Demo - <a href="https://fonts.google.com">https://fonts.google.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>13.1.6</span> Google Fonts Example</h4>
+            <div>
+              <div>
+                <pre><code><span style="color: #CC9393;">&lt;!DOCTYPE html&gt;</span></code>
+<code>&lt;<span style="color: #93E0E3;">html</span>&gt;</code>
+<code>  &lt;<span style="color: #93E0E3;">head</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">title</span>&gt;<span style="font-weight: bold;">Google Fonts example</span>&lt;/<span style="color: #93E0E3;">title</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">link</span> <span style="color: #DFAF8F;">href</span>=<span style="color: #CC9393;">"https://fonts.googleapis.com/css?family=Lato"</span></code>
+<code>          <span style="color: #DFAF8F;">rel</span>=<span style="color: #CC9393;">"stylesheet"</span> <span style="color: #DFAF8F;">type</span>=<span style="color: #CC9393;">"text/css"</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">style</span>&gt;</code>
+<code>      h1.lato { font-family: Lato, sans-serif; }</code>
+<code>      h1.sans { font-family: sans-serif; }</code>
+<code>    &lt;/<span style="color: #93E0E3;">style</span>&gt;</code>
+<code>  &lt;/<span style="color: #93E0E3;">head</span>&gt;</code>
+<code>  &lt;<span style="color: #93E0E3;">body</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">h1</span>&gt;<span style="font-weight: bold;">An unstyled heading</span>&lt;/<span style="color: #93E0E3;">h1</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">h1</span> <span style="color: #DFAF8F;">class</span>=<span style="color: #CC9393;">"lato"</span>&gt;<span style="font-weight: bold;">A heading in Lato</span>&lt;/<span style="color: #93E0E3;">h1</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">h1</span> <span style="color: #DFAF8F;">class</span>=<span style="color: #CC9393;">"sans"</span>&gt;<span style="font-weight: bold;">A heading in sans-serif</span>&lt;/<span style="color: #93E0E3;">h1</span>&gt;</code>
+<code>  &lt;/<span style="color: #93E0E3;">body</span>&gt;</code>
+<code>&lt;/<span style="color: #93E0E3;">html</span>&gt;</code>
+</pre>
+              </div>
+            </div>
+
+            <div>
+              <h5><span>13.1.6.1</span> Google Fonts example</h5>
+              <div>
+                <div>
+                  <p><img src="google-fonts-example.png" alt="google-fonts-example.png" />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>13.1.7</span> Exercise: Google Fonts</h4>
+            <div>
+              <ul>
+                <li>Choose three fonts from Google Fonts
+                  <ul>
+                    <li>One sans-serif, for headings</li>
+                    <li>One serif, for almost everything else</li>
+                    <li>One monospace</li>
+                  </ul>
+                </li>
+                <li>Update your files to use them</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>13.1.8</span> Solution: Google Fonts (html)</h4>
+            <div>
+              <div>
+                <pre><code><span style="color: #CC9393;">&lt;!DOCTYPE html&gt;</span></code>
+<code>&lt;<span style="color: #93E0E3;">html</span>&gt;</code>
+<code>  &lt;<span style="color: #93E0E3;">head</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">title</span>&gt;<span style="font-weight: bold;">Google Fonts example</span>&lt;/<span style="color: #93E0E3;">title</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">link</span> <span style="color: #DFAF8F;">href</span>=<span style="color: #CC9393;">"https://fonts.googleapis.com/css?family=Cardo|Cutive+Mono|Titillium+Web"</span></code>
+<code>          <span style="color: #DFAF8F;">rel</span>=<span style="color: #CC9393;">"stylesheet"</span> <span style="color: #DFAF8F;">type</span>=<span style="color: #CC9393;">"text/css"</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">link</span> <span style="color: #DFAF8F;">href</span>=<span style="color: #CC9393;">"style.css"</span> <span style="color: #DFAF8F;">rel</span>=<span style="color: #CC9393;">"stylesheet"</span> <span style="color: #DFAF8F;">type</span>=<span style="color: #CC9393;">"text/css"</span>&gt;</code>
+<code>  &lt;/<span style="color: #93E0E3;">head</span>&gt;</code>
+<code>  &lt;<span style="color: #93E0E3;">body</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">h1</span>&gt;<span style="font-weight: bold;">My first heading</span>&lt;/<span style="color: #93E0E3;">h1</span>&gt;</code>
+<code></code>
+<code>    &lt;<span style="color: #93E0E3;">p</span>&gt;I like to write. Using only short sentences. It's</code>
+<code>      very relaxing.&lt;/<span style="color: #93E0E3;">p</span>&gt;</code>
+<code></code>
+<code>    &lt;<span style="color: #93E0E3;">pre</span>&gt;echo "Don't forget to add and commit your changes"&lt;/<span style="color: #93E0E3;">pre</span>&gt;</code>
+<code>  &lt;/<span style="color: #93E0E3;">body</span>&gt;</code>
+<code>&lt;/<span style="color: #93E0E3;">html</span>&gt;</code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>13.1.9</span> Solution: Google Fonts (CSS)</h4>
+            <div>
+              <div>
+                <pre><code><span style="color: #93E0E3;">h1, h2, h3, h4, h5, h6 </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-family</span>: <span style="color: #CC9393;">'Titilliam Web'</span>, sans-serif;</code>
+<code>}</code>
+<code></code>
+<code><span style="color: #93E0E3;">pre, tt, code </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-family</span>: <span style="color: #CC9393;">'Cutive Mono'</span>, monospace;</code>
+<code>}</code>
+<code></code>
+<code><span style="color: #93E0E3;">body </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-family</span>: <span style="color: #CC9393;">'Cardo'</span>, serif;</code>
+<code>}</code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>13.1.10</span> Result: Google Fonts</h4>
+            <div>
+              <div>
+                <p><img src="result-google-fonts.png" alt="result-google-fonts.png" />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3><span>13.2</span> <code>font-size: ...</code></h3>
+          <div>
+            <ul>
+              <li>Sets the height of the font</li>
+              <li><code>body</code> default is <code>16px</code></li>
+            </ul>
+            <div>
+              <pre><code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Size measured in pixels </span><span style="color: #5F7F5F;">*/</span></code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-size</span>: 16px;</code>
+<code>}</code>
+<code></code>
+<code><span style="color: #93E0E3;">p.warning </span>{</code>
+<code>  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Size measured in 'm' widths (approx) </span><span style="color: #5F7F5F;">*/</span></code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-size</span>: 1.5em;</code>
+<code>}</code>
+</pre>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>13.2.1</span> <code>font-size: ...</code> example</h4>
+            <div>
+              <div>
+                <pre><code><span style="color: #CC9393;">&lt;!DOCTYPE html&gt;</span></code>
+<code>&lt;<span style="color: #93E0E3;">html</span>&gt;</code>
+<code>  &lt;<span style="color: #93E0E3;">head</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">style</span>&gt;</code>
+<code>      article { font-size: 2em; }</code>
+<code>      article p { font-size: 0.75em; }</code>
+<code>    &lt;/<span style="color: #93E0E3;">style</span>&gt;</code>
+<code>  &lt;/<span style="color: #93E0E3;">head</span>&gt;</code>
+<code>  &lt;<span style="color: #93E0E3;">body</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">p</span>&gt;Unstyled p, size = 16px = 1em.&lt;/<span style="color: #93E0E3;">p</span>&gt;</code>
+<code></code>
+<code>    &lt;<span style="color: #93E0E3;">article</span>&gt;</code>
+<code>      &lt;<span style="color: #93E0E3;">p</span>&gt;article p, size = ?px&lt;/<span style="color: #93E0E3;">p</span>&gt;</code>
+<code>    &lt;/<span style="color: #93E0E3;">article</span>&gt;</code>
+<code>  &lt;/<span style="color: #93E0E3;">body</span>&gt;</code>
+<code>&lt;/<span style="color: #93E0E3;">html</span>&gt;</code>
+</pre>
+              </div>
+
+              <div>
+                <p><img src="font-size-example.png" alt="font-size-example.png" />
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4><span>13.2.2</span> Solution: <code>font-size: ...</code></h4>
+            <div>
+              <div>
+                <pre><code><span style="color: #CC9393;">&lt;!DOCTYPE html&gt;</span></code>
+<code>&lt;<span style="color: #93E0E3;">html</span>&gt;</code>
+<code>  &lt;<span style="color: #93E0E3;">head</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">style</span>&gt;</code>
+<code>      article { font-size: 2em; }</code>
+<code>      article p { font-size: 0.75em; }</code>
+<code>    &lt;/<span style="color: #93E0E3;">style</span>&gt;</code>
+<code>  &lt;/<span style="color: #93E0E3;">head</span>&gt;</code>
+<code>  &lt;<span style="color: #93E0E3;">body</span>&gt;</code>
+<code>    &lt;<span style="color: #93E0E3;">p</span>&gt;Unstyled p, size = 16px = 1em.&lt;/<span style="color: #93E0E3;">p</span>&gt;</code>
+<code></code>
+<code>    &lt;<span style="color: #93E0E3;">article</span>&gt;</code>
+<code>      &lt;<span style="color: #93E0E3;">p</span>&gt;Article = 2em = (default * 2)</code>
+<code>        = (16px * 2) = 32px&lt;/<span style="color: #93E0E3;">p</span>&gt;</code>
+<code></code>
+<code>      &lt;<span style="color: #93E0E3;">p</span>&gt;article p = 0.75em = (article * 0.75)</code>
+<code>        = (32 * 0.75) = 24px&lt;/<span style="color: #93E0E3;">p</span>&gt;</code>
+<code>    &lt;/<span style="color: #93E0E3;">article</span>&gt;</code>
+<code></code>
+<code>    &lt;<span style="color: #93E0E3;">p</span> <span style="color: #DFAF8F;">style</span>=<span style="color: #CC9393;">"font-size: 24px;"</span>&gt;p, forced to 24px.&lt;/<span style="color: #93E0E3;">p</span>&gt;</code>
+<code>  &lt;/<span style="color: #93E0E3;">body</span>&gt;</code>
+<code>&lt;/<span style="color: #93E0E3;">html</span>&gt;</code>
+</pre>
+              </div>
+
+              <div>
+                <p><img src="solution-font-size.png" alt="solution-font-size.png" />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3><span>13.3</span> <code>font-weight: ...</code></h3>
+          <div>
+            <ul>
+              <li>Says how bold the text should be</li>
+            </ul>
+            <div>
+              <pre><code><span style="color: #93E0E3;">strong </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-weight</span>: bold; <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Default </span><span style="color: #5F7F5F;">*/</span></code>
+<code>}</code>
+</pre>
+            </div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">strong </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-weight</span>: normal; <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Disables bold </span><span style="color: #5F7F5F;">*/</span></code>
+<code>}</code>
+</pre>
+            </div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">span.bolder </span>{</code>
+<code>  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">&lt;strong&gt;This is &lt;span class="bolder"&gt;more bold&lt;/span&gt;&lt;/strong&gt; </span><span style="color: #5F7F5F;">*/</span></code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-weight</span>: bolder;</code>
+<code>}</code>
+</pre>
+            </div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">span.lighter </span>{</code>
+<code>  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">&lt;strong&gt;This is &lt;span class="lighter"&gt;less bold&lt;/span&gt;&lt;/strong&gt; </span><span style="color: #5F7F5F;">*/</span></code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-weight</span>: lighter;</code>
+<code>}</code>
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3><span>13.4</span> <code>font-style: ...</code></h3>
+          <div>
+            <ul>
+              <li>Used for italic variations, rare</li>
+            </ul>
+            <div>
+              <pre><code><span style="color: #93E0E3;">em </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-style</span>: italic; <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Default </span><span style="color: #5F7F5F;">*/</span></code>
+<code>}</code>
+</pre>
+            </div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">em </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-style</span>: normal; <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Disables italics </span><span style="color: #5F7F5F;">*/</span></code>
+<code>}</code>
+</pre>
+            </div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">em </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-style</span>: oblique; <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Simulates italic </span><span style="color: #5F7F5F;">*/</span></code>
+<code>}</code>
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3><span>13.5</span> <code>line-height: ...</code></h3>
+          <div>
+            <ul>
+              <li>How much extra space to leave around each line</li>
+              <li>Gives the text some "breathing room"</li>
+              <li>Value is a multiplier of the font-size</li>
+            </ul>
+            <div>
+              <pre><code><span style="color: #93E0E3;">body </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">line-height</span>: 1.2;  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Font size * 1.2 </span><span style="color: #5F7F5F;">*/</span></code>
+<code>}</code>
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3><span>13.6</span> <code>font: ...</code> shorthand property</h3>
+          <div>
+            <div>
+              <pre><code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font</span>: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;</code>
+<code>}</code>
+</pre>
+            </div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-style</span>: italic;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-variant</span>: normal;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-weight</span>: bold;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-stretch</span>: normal;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-size</span>: 3em</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">line-height</span>: 1.5</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">font-family</span>: Helvetica, Arial, sans-serif</code>
+<code>}</code>
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3><span>13.7</span> <code>text-transform: ...</code></h3>
+          <div>
+            <div>
+              <pre><code><span style="color: #93E0E3;">h1 </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-transform</span>: none;  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Do nothing special </span><span style="color: #5F7F5F;">*/</span></code>
+<code>}</code>
+</pre>
+            </div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">h1 </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-transform</span>: uppercase;  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Text shown in ALL CAPS </span><span style="color: #5F7F5F;">*/</span></code>
+<code>}</code>
+</pre>
+            </div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">h1 </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-transform</span>: lowercase;  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Text shown all lowercase </span><span style="color: #5F7F5F;">*/</span></code>
+<code>}</code>
+</pre>
+            </div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">h1 </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-transform</span>: capitalize;  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">First Letter Capitalized </span><span style="color: #5F7F5F;">*/</span></code>
+<code>}</code>
+</pre>
+            </div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">h1 </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-transform</span>: full-width;  <span style="color: #5F7F5F;">/* </span><span style="color: #7F9F7F;">Similar to monospace </span><span style="color: #5F7F5F;">*/</span></code>
+<code>}</code>
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3><span>13.8</span> <code>text-decoration: ...</code></h3>
+          <div>
+            <div>
+              <pre><code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-decoration</span>: none;</code>
+<code>}</code>
+</pre>
+            </div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-decoration</span>: underline;</code>
+<code>}</code>
+</pre>
+            </div>
+
+            <div>
+              <pre><code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-decoration</span>: overline;</code>
+<code>}</code>
+</pre>
+</div>
+            <div>
+              <pre><code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-decoration</span>: line-through;</code>
+<code>}</code>
+</pre>
+            </div>
+            <div>
+              <pre><code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-decoration-line</span>: line-through;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-decoration-style</span>: wavy;</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-decoration-color</span>: <span style="color: #ffffff; background-color: #ff0000;">rgb(255, 0, 0)</span>;</code>
+<code>}</code>
+<code></code>
+<code><span style="color: #5F7F5F;">/** </span><span style="color: #7F9F7F;">The previous rule is identical to the next rule. </span><span style="color: #5F7F5F;">*/</span></code>
+<code></code>
+<code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-decoration</span>: line-through wavy <span style="color: #ffffff; background-color: #ff0000;">rgb(255, 0, 0)</span>;</code>
+<code>}</code>
+</pre>
+            </div>
+          </div>
+          <div>
+            <h4><span>13.8.1</span> Text decoration examples</h4>
+            <div>
+              <div>
+                <p><img src="text-decoration-examples.png" alt="text-decoration-examples.png" />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3><span>13.9</span> <code>text-shadow: ...</code></h3>
+          <div>
+            <div>
+              <pre><code><span style="color: #93E0E3;">p </span>{</code>
+<code>  <span style="color: #F0DFAF; font-weight: bold;">text-shadow</span>: x-offset y-offset blur color;</code>
+<code>}</code>
+</pre>
+            </div>
+            <ul>
+              <li><code>x-offset</code>: Shadow starts this many pixels right
+                <ul>
+                  <li>Can be negative, shadow is offset to the left</li>
+                </ul>
+              </li>
+              <li><code>y-offset</code>: Shadow starts this many pixels down
+                <ul>
+                  <li>Can be negative, shadow is offset up</li>
+                </ul>
+              </li>
+              <li><code>blur</code> is how blurry the shadow is.</li>
+              <li><code>color</code> is the shadow's color, can include alpha</li>
+            </ul>
+            <div>
+              <pre><code>&lt;<span style="color: #93E0E3;">h1</span> <span style="color: #DFAF8F;">style</span>=<span style="color: #CC9393;">"text-shadow: 5px 5px 0px red;"</span>&gt;<span style="font-weight: bold;">Me</span></code>
+<code><span style="font-weight: bold;">   and my shadow</span>&lt;/<span style="color: #93E0E3;">h1</span>&gt;</code>
+<code></code>
+<code>&lt;<span style="color: #93E0E3;">h1</span> <span style="color: #DFAF8F;">style</span>=<span style="color: #CC9393;">"text-shadow: -5px -5px 5px red;"</span>&gt;<span style="font-weight: bold;">Me</span></code>
+<code><span style="font-weight: bold;">   and my shadow</span>&lt;/<span style="color: #93E0E3;">h1</span>&gt;</code>
+</pre>
+            </div>
+            <div>
+              <p><img src="text-shadow.png" alt="text-shadow.png" />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="inspector">
+        <h2><span>14</span> The browser inspector</h2>
+        <div>
+          <ul>
+            <li><code>More tools</code> &gt; <code>Developer tools</code></li>
+          </ul>
+        </div>
+        <div>
+          <h3><span>14.1</span> You experiment with the Developer Tools</h3>
+        </div>
+      </div>
+      <div id="practice">
+        <h2><span>15</span> CSS Practice</h2>
+        <div>
+          <ul>
+            <li>Style your recipes, cheatsheet, and portfolio
+              <ul>
+                <li>Different styles for each type</li>
+              </ul>
+            </li>
+            <li>Choose palette, fonts, general layout</li>
+            <li>Enhance some content with different styles
+              <ul>
+                <li>No ransom notes!</li>
+              </ul>
+            </li>
+            <li><a href="https://jgthms.com/web-design-in-4-minutes/">https://jgthms.com/web-design-in-4-minutes/</a></li>
+          </ul>
+          <ul>
+            <li>General layout</li>
+            <li>Fonts
+              <ul>
+                <li><a href="https://type-scale.com/">https://type-scale.com/</a></li>
+                <li><a href="https://www.modularscale.com/">https://www.modularscale.com/</a></li>
+              </ul>
+            </li>
+            <li>Spacing</li>
+            <li>Colors</li>
+            <li>Effects
+              <ul>
+                <li>Shapes</li>
+                <li>Borders</li>
+                <li>Images</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
