@@ -1,147 +1,162 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Rami Mhanna CV</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!--  <link rel="stylesheet" type="text/css" href="style2.css">-->
+    <link href="style3.css" type="text/css" rel="stylesheet">
+    <link href="style2.css" type="text/css" rel="stylesheet" media="screen and (min-width: 426px)">
+    <link href="style.css" type="text/css" rel="stylesheet" media="screen and (min-width: 769px)">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <script src="cv.js"></script>
   </head>
 
   <body>
     <div id="header">
-      <h1>Curriculum Vitae (<span class="name">Rami Mhanna</span>)</h1>
+      <h1> Rami Mhanna </h1>
     </div>
 
-    <div id="personal">
-      <div class="personal1">
-        <h2>Personal Information</h2>
+    <div id="content">
+      <div id="extra_small">
+        <p><img src="space.png" alt="It is me" title="I swear it is me "></p>
+      </div>
 
-        <ul>
-          <li>Rami Mhanna</li>
-          <li>Hauptstrasse 40</li>
-          <li>6034 Inwil</li>
-          <li>Telefon:(+41)779110003</li>
-          <li>E-mail:rami.mhanna@powercoders.org</li>
-          <li>Born on February 16, 1988 in Uster, Z&uuml;rich</li>
-          <li>Syrian citizens</li>
-          <li>Resident in Switzerland since September 2015</li>
-          <li>Married and father of two children (5 & 3 years old)</li>
-          <li><a href="https://github.com/RamiMhanna/powercoders">https://github.com/RamiMhanna/powercoders</a></li>
-        </ul>
+      <div id="links">
+        <button type="button" name="personal_information" id="personal_information_btn" onclick="show_personal_information()">Personal Information</button>
+        <button type="button" name="it_knowledge" id="it_knowledge_btn" onclick="show_it_knowledge()">IT Knowledge</button>
+        <button type="button" name="education" id="education_btn" onclick="show_education()">Education</button>
+        <button type="button" name="courses" id="courses_btn" onclick="show_courses()">Courses</button>
+        <button type="button" name="activities" id="activities_btn" onclick="show_activities()">Activities</button>
+        <button type="button" name="qualification" id="qualification_btn" onclick="show_qualification()">Qualification</button>
+        <button type="button" name="languages" id="languages_btn" onclick="show_languages()">Languages</button>
+      </div>
+
+      <div id="col1">
+        <div id="personal_information">
+          <h2>Personal Information</h2>
+
+          <ul>
+            <li>Name : Rami Mhanna</li>
+            <li>Address : Hauptstrasse 40</li>
+            <li>City : 6034 Inwil</li>
+            <li>Telefon : (+41)779110003</li>
+            <li>Birthday : 16 February 1988</li>
+            <li><a class="img" href="mailto:rami.mhanna@powercoders.org"><img src="email.png" alt="rami.mhanna@powercoders.org" title="rami.mhanna@powercoders.org"></a>
+              <a class="github" href="https://github.com/RamiMhanna/powercoders"><img src="github.png" alt="https://github.com/RamiMhanna/powercoders" title="Github - Rami Mhanna"></a></li>
+          </ul>
+        </div>
+
+        <div id="activities">
+          <h2>Previous Activities</h2>
+
+          <ul>
+            <li><span class="fromtoyear">07/2017 - 11/2018</span><span class="jobtitle">Pizzaria Lavita (Rothenburg - Lucern)</span> </li>
+            <li><span class="fromtoyear">01/2015 - 09/2015</span><span class="jobtitle">Automation Engineer (Modern Beacon/Mitsubishi Partner in Jordan) and robots (Mitsubishi Electric -
+                Jordan)</span></li>
+            <li><span class="fromtoyear">08/2013 - 01/2015</span><span class="jobtitle">Maintenance Engineer (Jawad Modern Bakery - Jordan)</span> </li>
+            <li><span class="fromtoyear">04/2013 - 07/2013</span><span class="jobtitle">HMI Programming, SCADA Systems (Al-Arabi Center - Jordan) </span> </li>
+            <li><span class="fromtoyear">12/2012 - 04/2013</span><span class="jobtitle">Arduino and Electronic circuit design (Al-Raies Institut - Jordan)</span> </li>
+            <li><span class="fromtoyear">03/2010 - 02/2012</span><span class="jobtitle">Scriptlanguage : Perl (ZGroup - Damascus) </span> </li>
+          </ul>
+        </div>
+
+        <div id="qualification">
+          <h2>Qualification</h2>
+
+          <ul>
+            <li><span class="fromtoyear">09/2007 - 5/2008</span><span class="jobtitle">Lighting Technologist - Damascus University</span></li>
+            <li><span class="fromtoyear">09/2009 - 5/2010</span><span class="jobtitle">Industrial Programming : PLC, Microcontroller - Damascus University</span></li>
+          </ul>
+        </div>
+
+        <div id="languages">
+          <h2>Languages</h2>
+
+          <ul>
+            <li>Arabic : Motherlanguage</li>
+            <li>English :
+              <ul>
+                <li>Speaking : Good</li>
+                <li>Writing : Good</li>
+              </ul>
+            </li>
+            <li>German :
+              <ul>
+                <li>Speaking : Good</li>
+                <li>Writing : Good</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="col2">
+        <div id="education">
+          <h2>Education</h2>
+
+          <ul>
+            <li><span class="fromtoyear">2005 - 2011</span><span class="educationallevel">Electronics Engineering and Telecommunication (Damascus University)</span> </li>
+            <li><span class="fromtoyear">2002 - 2004</span><span class="educationallevel">10. - 12. Class Secondery School(Ismaeel Al-Raies Damaskus)</span> </li>
+            <li><span class="fromtoyear">1999 - 2001</span><span class="educationallevel">7. &nbsp; - 9. &nbsp; Class Intermediate School(Ismaeel Al-Raies Damaskus)</span> </li>
+            <li><span class="fromtoyear">1993 - 1998</span><span class="educationallevel">1. &nbsp; - 6. &nbsp; Class Elementary School(Harasta Elementary School Damaskus)</span> </li>
+          </ul>
+        </div>
+
+        <div id="courses">
+          <h2>Courses</h2>
+
+          <ul>
+            <li><span class="fromtoyear">10/2014 - 11/2014</span><span class="educationallevel">Automation systems and robots (Mitsubishi Electric - Jordan)</span> </li>
+          </ul>
+        </div>
+
+        <div id="it_knowledge">
+          <h2>Computer Science Knowledge</h2>
+
+          <ul>
+            <li>Application of OS(windows)</li>
+            <li>Microsoft Office :
+              <ul>
+                <li>Word</li>
+                <li>Excel</li>
+                <li>PowerPoint</li>
+                <li>Outlook</li>
+              </ul>
+            </li>
+            <li>Industrial Programming :
+              <ul>
+                <li>PLC</li>
+                <li>HMI</li>
+                <li>Microcontroller</li>
+                <li>Arm Robot Controller</li>
+              </ul>
+            </li>
+            <li>Programming Languages :
+              <ul>
+                <li>C</li>
+                <li>C++</li>
+                <li>C-Arduino</li>
+                <li>VB</li>
+              </ul>
+            </li>
+            <li>Script Languages :
+              <ul>
+                <li>PHP</li>
+                <li>Python</li>
+                <li>Perl</li>
+                <li>JavaScript</li>
+              </ul>
+            </li>
+            <li>Markup Languages :
+              <ul>
+                <li>HTML</li>
+              </ul>
+            </li>
+            <li>Cascading Style Sheet (CSS)</li>
+          </ul>
+        </div>
       </div>
     </div>
-
-    <div class="education">
-      <h2>Education</h2>
-
-      <ul>
-        <li><span class="fromtoyear">2005 - 2011</span><span class="educationallevel">Electronics Engineering and Telecommunication (Damascus University)</span> </li>
-        <li><span class="fromtoyear">2002 - 2004</span><span class="educationallevel">10. - 12. Class Secondery School(Ismaeel Al-Raies Damaskus)</span> </li>
-        <li><span class="fromtoyear">1999 - 2001</span><span class="educationallevel">7. &nbsp; - 9. &nbsp; Class Intermediate School(Ismaeel Al-Raies Damaskus)</span> </li>
-        <li><span class="fromtoyear">1993 - 1998</span><span class="educationallevel">1. &nbsp; - 6. &nbsp; Class Elementary School(Harasta Elementary School Damaskus)</span> </li>
-      </ul>
-    </div>
-
-    <div class="education">
-      <h2>Courses</h2>
-
-      <ul>
-        <li><span class="fromtoyear">10/2014 - 11/2014</span><span class="educationallevel">Automation systems and robots (Mitsubishi Electric - Jordan)</span> </li>
-      </ul>
-    </div>
-
-    <div class="education">
-      <h2>Previous Activities</h2>
-
-      <ul>
-        <li><span class="fromtoyear">07/2017 - 11/2018</span><span class="jobtitle">Pizzaria Lavita (Rothenburg - Lucern)</span> </li>
-        <li><span class="fromtoyear">01/2015 - 09/2015</span><span class="jobtitle">Automation Engineer (Modern Beacon/Mitsubishi Partner in Jordan) and robots (Mitsubishi Electric -
-              Jordan)</span>
-        </li>
-        <li><span class="fromtoyear">08/2013 - 01/2015</span><span class="jobtitle">Maintenance Engineer (Jawad Modern Bakery - Jordan)</span> </li>
-        <li><span class="fromtoyear">04/2013 - 07/2013</span><span class="jobtitle">HMI Programming, SCADA Systems (Al-Arabi Center - Jordan) </span> </li>
-        <li><span class="fromtoyear">12/2012 - 04/2013</span><span class="jobtitle">Arduino and Electronic circuit design (Al-Raies Institut - Jordan)</span> </li>
-        <li><span class="fromtoyear">03/2010 - 02/2012</span><span class="jobtitle">Scriptlanguage : Perl (ZGroup - Damascus) </span> </li>
-      </ul>
-    </div>
-
-    <div id="qualification">
-      <h2>Qualification</h2>
-
-      <ul>
-        <li><span class="fromtoyear">09/2007 - 5/2008</span><span class="jobtitle">Lighting Technologist - Damascus University</span></li>
-        <li><span class="fromtoyear">09/2009 - 5/2010</span><span class="jobtitle">Industrial Programming : PLC, Microcontroller - Damascus University</span></li>
-      </ul>
-    </div>
-
-    <div id="languages">
-      <h2>Languages</h2>
-
-      <ul>
-        <li>Arabic : Motherlanguage</li>
-        <li>English :
-          <ul>
-            <li>Speaking : Good</li>
-            <li>Writing : Good</li>
-          </ul>
-        </li>
-        <li>German :
-          <ul>
-            <li>Speaking : Good</li>
-            <li>Writing : Good</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <div id="knowledge">
-      <h2>Computer Science Knowledge</h2>
-      
-      <ul>
-        <li>Application of OS(windows)</li>
-        <li>Microsoft Office :
-          <ul>
-            <li>Word</li>
-            <li>Excel</li>
-            <li>PowerPoint</li>
-            <li>Outlook</li>
-          </ul>
-        </li>
-        <li>Industrial Programming :
-          <ul>
-            <li>PLC</li>
-            <li>HMI</li>
-            <li>Microcontroller</li>
-            <li>Arm Robot Controller</li>
-          </ul>
-        </li>
-        <li>Programming Languages :
-          <ul>
-            <li>C</li>
-            <li>C++</li>
-            <li>C-Arduino</li>
-            <li>VB</li>
-          </ul>
-        </li>
-        <li>Script Languages :
-          <ul>
-            <li>PHP</li>
-            <li>Python</li>
-            <li>Perl</li>
-            <li>JavaScript</li>
-          </ul>
-        </li>
-        <li>Markup Languages :
-          <ul>
-            <li>HTML</li>
-          </ul>
-        </li>
-        <li>Cascading Style Sheet (CSS)</li>
-      </ul>
-    </div>
-
-    <img class="personal2" src="me.jpg" alt="It is me" title="I swear it is me ">
   </body>
-
 </html>

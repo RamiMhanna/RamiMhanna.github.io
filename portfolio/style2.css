@@ -1,17 +1,33 @@
-.personal2{
-position: absolute;
-top: 80px;
-left: 60px;
-border: 2px solid darkblue;
-margin: 5px;
+/*This style sheet is for the screens that their wide is between  426px and 769px*/
+#links {
+  display: inline-grid;
 }
-#personal{
-float: right;
-border: 1px solid darkblue;
-margin: 5px;
 
+h2 {
+  padding-left: 0px;
 }
-.education{
-  border: 1px solid darkblue;
-  margin: 5px;
+
+ul {
+  padding-left: 5px;
+  padding-right: 5px;
 }
+
+#extra_small p img {
+    width: 20vh;
+    height: 22vh;
+    position: absolute;
+    right: 4em;
+    top: 4.5em;
+}
+
+#personal_information, #it_knowledge,
+#education, #courses, #activities,
+#languages, #qualification {
+   position: absolute;
+   top : 235px;
+   left : 220px;
+   width: 43%;
+   padding-top: 3px;
+   padding-left: 15px;
+   padding-right: 3px;
+ }
