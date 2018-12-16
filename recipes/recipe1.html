@@ -2,64 +2,91 @@
 <html lang="en" dir="ltr">
 
   <head>
+    <script src="recipe1.js"></script>
     <meta charset="utf-8">
     <title>Simple White Cake</title>
     <link href="https://fonts.googleapis.com/css?family=Boogaloo|Merienda+One|Oleo+Script" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
-
   </head>
 
   <body>
-
     <div id="header">
       <h1>Simple White Cake</h1>
+
       <p><img src="cake1.jpg" alt="Simple White Cake" title="Simple White Cake"></p>
     </div>
 
     <div id="ingredients">
-      <h2>Ingredients</h2>
-      <ul>
-        <li>1 cup <em>white sugar</em></li>
-        <li>1/2 cup <b>butter</b></li>
-        <li>2 eggs</li>
-        <li>2 teaspoons vanilla extract</li>
-        <li>1 1/2 cups all-purpose flour</li>
-        <li>1 3/4 teaspoons <i>baking powder</i></li>
-        <li>1/2 cup <strong>milk</strong></li>
-      </ul>
+      <h2 class="ingredients">Ingredients</h2>
+
+      <button class="button">&Or;</button>
+
+      <div class="panel">
+        <ul>
+          <li>1 cup <em>white sugar</em></li>
+          <li>1/2 cup <b>butter</b></li>
+          <li>2 eggs</li>
+          <li>2 teaspoons vanilla extract</li>
+          <li>1 1/2 cups all-purpose flour</li>
+          <li>1 3/4 teaspoons <i>baking powder</i></li>
+          <li>1/2 cup <strong>milk</strong></li>
+        </ul>
+      </div>
     </div>
 
-    <div id="directions">
+    <div class="directions">
       <h2>Directions</h2>
-      <ul>
-        <li><span id="prepare">Prepare : <span>20 min</span> |</span><span id="cook"> Cook : <span>30 min</span> |</span><span id="ready"> Ready In : <span>50 min</span></span></li>
-      </ul>
-      <ol>
-        <li>Preheat oven to 350 degrees F (175 degrees C).</li>
 
-        <li>Grease and flour a 9x9 inch pan or line a muffin pan with paper liners.
-          <ul>
-            <li>In a medium bowl, cream together the sugar and butter. Beat in the eggs, one at a time, then stir in the vanilla.</li>
-            <li>Combine flour and baking powder, add to the creamed mixture and mix well.</li>
-            <li>Finally stir in the milk until batter is smooth.</li>
-            <li>Pour or spoon batter into the prepared pan.</li>
-          </ul>
-        </li>
-        <li>Bake for 30 to 40 minutes in the preheated oven. For cupcakes, bake 20 to 25 minutes. Cake is done when it springs back to the touch.</li>
+      <button class="button">&Or;</button>
 
-      </ol>
-
-
+      <div class="panel">
+        <ul>
+          <li><span id="prepare">Prepare : <span>20 min</span> |</span><span id="cook"> Cook : <span>30 min</span> |</span><span id="ready"> Ready In : <span>50 min</span></span></li>
+        </ul>
+        <ol>
+          <li>Preheat oven to 350 degrees F (175 degrees C).</li>
+          <li>Grease and flour a 9x9 inch pan or line a muffin pan with paper liners.
+            <ul>
+              <li>In a medium bowl, cream together the sugar and butter. Beat in the eggs, one at a time, then stir in the vanilla.</li>
+              <li>Combine flour and baking powder, add to the creamed mixture and mix well.</li>
+              <li>Finally stir in the milk until batter is smooth.</li>
+              <li>Pour or spoon batter into the prepared pan.</li>
+            </ul>
+          </li>
+          <li>Bake for 30 to 40 minutes in the preheated oven. For cupcakes, bake 20 to 25 minutes. Cake is done when it springs back to the touch.</li>
+        </ol>
+      </div>
     </div>
 
     <div id="tip">
-      <p><i>Tip</i></p>
-      <p>Aluminum foil can be used to keep food moist, cook it evenly, and make clean-up easier.</p>
+      <h2 class="tip">Tips</h2>
+
+      <button class="button">&Or;</button>
+
+      <p class="panel">Aluminum foil can be used to keep food moist, cook it evenly, and make clean-up easier.</p>
     </div>
 
     <div id="footer">
       <h3><em>Gute Abetit</em></h3>
     </div>
+    <script>
+      let coll = document.getElementsByClassName("button");
+
+      let i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        let content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        }
+        else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+        });
+      }
+    </script>
   </body>
 
 </html>

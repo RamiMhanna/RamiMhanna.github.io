@@ -1,65 +1,78 @@
-body{
+body {
   width: 1000px;
   background-color: rgba(215,211, 202, 0.5);
   margin: auto;
   font-family: 'Boogaloo', cursive;
 }
-  #header{
-    text-align: center;
-  }
-  img{
-    border: 1px solid #c3c3c3;
-    border-radius: 10px;
-    box-shadow: 2px 4px;
-  }
-  #ingredients{
-    background-color: rgba(215,211, 202, 0.9);
-    border: 1px solid #c3c3c3;
-    border-radius: 10px;
-    font-size: 1.3em;
-    box-shadow: 2px 4px;
-    padding: 15px;
-    margin: 10px;
-  }
-  #directions{
-    background-color: rgba(215,211, 202, 0.9);
-    font-size: 1.3em;
-    border: 1px solid #c3c3c3;
-    border-radius: 10px;
-    box-shadow: 2px 4px;
-    padding: 15px;
-    margin: 10px;
 
+h1 {
+  font-family:'Merienda One', cursive;
   }
 
-  #EditorsNotes{
-    background-color: rgba(215,211, 202, 0.9);
-    font-size: 1.3em;
-    border: 1px solid #c3c3c3;
-    border-radius: 10px;
-    box-shadow: 2px 4px;
-    padding: 15px;
-    margin: 10px;
-  }
-
-  #tip{
-    background-color: rgba(215,211, 202, 0.9);
-    font-size: 1.1em;
-    border: 1px solid #c3c3c3;
-    border-radius: 10px;
-    box-shadow: 2px 4px;
-    padding: 15px;
-    margin: 10px;
-
-  }
-  #footer{
-    padding: 15px;
-    text-align: center;
-  }
-
-  h1{
-    font-family:'Merienda One', cursive;
-  }
-  h2{
+h2 {
   font-family: 'Oleo Script', cursive;
+  margin-top: 0;
+  /* border: 1px solid black;
+  background-color: rgba(215,211, 202, 0.9);
+  border: 1px solid #c3c3c3;
+  border-radius: 10px;
+  box-shadow: 2px 4px;*/
+}
+
+img {
+  border: 1px solid #c3c3c3;
+  border-radius: 10px;
+  box-shadow: 2px 4px;
+  }
+
+#header, #footer {
+    text-align: center;
+}
+
+.button {
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  top: .5em;
+  right: 2em;
+  width: 15px;
+  height: 13px;
+  border: none;
+  background-color: rgba(215,211, 202, 0.7);
+  font-size: 160%;
+  outline: none;
+  transition: 0.4s;
+}
+
+.directions {
+  position: relative;
+  background-color: rgba(215,211, 202, 0.7);
+  border: 1px solid #c3c3c3;
+  border-radius: 10px;
+  font-size: 1.3em;
+  box-shadow: 2px 4px;
+  padding: 15px;
+  margin: 10px;
+}
+
+.active, .button:hover {
+  background-color: rgba(215,211, 202, 1);
+}
+
+#ingredients, #directions, #EditorsNotes, #tip {
+  position: relative;
+  background-color: rgba(215,211, 202, 0.9);
+  border: 1px solid #c3c3c3;
+  border-radius: 10px;
+  font-size: 1.3em;
+  box-shadow: 2px 4px;
+  padding: 15px;
+  margin: 10px;
+
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
 }
