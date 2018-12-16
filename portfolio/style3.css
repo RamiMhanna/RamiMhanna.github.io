@@ -76,6 +76,11 @@ h2 {
   height: 3em;
 }
 
+.in img {
+  width: 3em;
+  height: 3em;
+}
+
 #personal_information {
 display: block;
 }
