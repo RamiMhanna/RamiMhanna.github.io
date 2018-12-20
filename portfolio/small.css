@@ -3,10 +3,11 @@ body {
   background-color: rgba(238, 243, 238, 0.89);
   padding: 15px;
   margin: 5px;
+  width: 90%;
 }
 
 h1 {
-  margin-top: 0;
+  margin: 10px 0;
   border: 1px solid black;
   border-radius: 10px;
   background-color: rgba(107, 113, 99, .5);
@@ -18,11 +19,13 @@ h2 {
   padding-left: 30px;
 }
 
-#extra_small p img {
+.me {
   display: block;
   margin: 0 auto;
   width: 70%;
   height: 70%;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 #personal_information ul {
@@ -30,16 +33,12 @@ h2 {
   list-style: none;
 }
 
-#links {
-  padding-left: 15px;
-  margin-bottom: 15px;
-  text-align: center;
+.fromtoyear {
+  padding-right: 2em;
 }
 
-#email {
-  font-size: 80%;
-  color: rgba(43, 41, 41, 0.62);
-  font-style: italic;
+.fromtoyear1 {
+  padding-right: 3.6em;
 }
 
 #personal_information_btn, #it_knowledge_btn,
@@ -53,38 +52,48 @@ h2 {
   margin: 3px;
 }
 
+#content {
+  background-color: rgba(93, 126, 48, 0.1);
+  border: 1px groove rgba(93, 126, 48, 0.4);
+  border-radius: 10px;
+  padding: 9px;
+}
 
 #personal_information, #it_knowledge,
 #education, #courses, #activities,
 #languages, #qualification {
-  background-color: rgba(93, 126, 48, 0.1);
-  border: 1px groove rgba(93, 126, 48, 0.4);
-  border-radius: 10px;
   padding: 25px 5px 5px 5px;
   font-size: 80%;
+  display: block;
+}
+
+#links {
+  padding-left: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.images {
+  width: 20px;
+  height: 20px;
+}
+
+.linkandimages {
   display: none;
-  min-height: 25vh;
 }
 
-.img img{
-  width: 3em;
-  height: 2.5em;
+.justimages {
+  width: 20px;
+  height: 20px;
+  display: inline;
 }
 
-.github img {
-  width: 3em;
-  height: 3em;
+.uparrow {
+  padding-left: 10px;
+}
+.uparrow a {
+  padding-left: 10px;
+  text-decoration: none;
 }
 
-.in img {
-  width: 3em;
-  height: 3em;
-}
-
-#personal_information {
-display: block;
-}
-
-.fromtoyear {
-  padding-right: 2em;
-}
+/* ---------------------------------------------------- */

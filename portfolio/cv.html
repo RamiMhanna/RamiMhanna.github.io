@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Rami Mhanna CV</title>
-    <link href="small.css" type="text/css" rel="stylesheet">
+    <link href="print.css" type="text/css" rel="stylesheet" media="print">
+    <link href="small.css" type="text/css" rel="stylesheet" media="screen">
     <link href="normal.css" type="text/css" rel="stylesheet" media="screen and (min-width: 426px)">
     <link href="larg.css" type="text/css" rel="stylesheet" media="screen and (min-width: 769px)">
+    <link href="xlarg.css" type="text/css" rel="stylesheet" media="screen and (min-width: 1025px)">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
-    <script src="cv.js"></script>
   </head>
 
   <body>
@@ -19,17 +20,17 @@
 
     <div id="content">
       <div id="extra_small">
-        <p><img src="space.png" alt="It is me" title="I swear it is me "></p>
+        <p><img class="me" src="space.jpg" alt="It is me" title="I swear it is me "></p>
       </div>
 
       <div id="links">
-        <button type="button" name="personal_information" id="personal_information_btn" onclick="show_personal_information()">Personal Information</button>
-        <button type="button" name="it_knowledge" id="it_knowledge_btn" onclick="show_it_knowledge()">IT Knowledge</button>
-        <button type="button" name="education" id="education_btn" onclick="show_education()">Education</button>
-        <button type="button" name="courses" id="courses_btn" onclick="show_courses()">Courses</button>
-        <button type="button" name="activities" id="activities_btn" onclick="show_activities()">Activities</button>
-        <button type="button" name="qualification" id="qualification_btn" onclick="show_qualification()">Qualification</button>
-        <button type="button" name="languages" id="languages_btn" onclick="show_languages()">Languages</button>
+        <button type="button" name="personal_information" id="personal_information_btn" onclick="window.location.href='#personal_information'">Personal Information</button>
+        <button type="button" name="it_knowledge" id="it_knowledge_btn" onclick="window.location.href='#it_knowledge'">IT Knowledge</button>
+        <button type="button" name="education" id="education_btn" onclick="window.location.href='#education'">Education</button>
+        <button type="button" name="courses" id="courses_btn" onclick="window.location.href='#courses'">Courses</button>
+        <button type="button" name="activities" id="activities_btn" onclick="window.location.href='#activities'">Activities</button>
+        <button type="button" name="qualification" id="qualification_btn" onclick="window.location.href='#qualification'">Qualification</button>
+        <button type="button" name="languages" id="languages_btn" onclick="window.location.href='#languages'">Languages</button>
       </div>
 
       <div id="col1">
@@ -37,22 +38,42 @@
           <h2>Personal Information</h2>
 
           <ul>
-            <li>Name : Rami Mhanna</li>
             <li>Address : Hauptstrasse 40</li>
             <li>City : 6034 Inwil</li>
             <li>Telefon : (+41)779110003</li>
             <li>Birthday : 16 February 1988</li>
-            <li><a class="img" href="mailto:rami.mhanna@powercoders.org"><img src="email.png" alt="rami.mhanna@powercoders.org" title="rami.mhanna@powercoders.org"></a>
-              <a class="github" href="https://github.com/RamiMhanna/powercoders"><img src="github.png" alt="https://github.com/RamiMhanna/powercoders" title="Github - Rami Mhanna"></a>
-              <a class="in" href="https://www.linkedin.com/in/rami-mhanna-587444162/"><img src="in.png" alt="https://www.linkedin.com/in/rami-mhanna-587444162/" title="LinkedIn - Rami Mhanna"></a>
-            </li>
+            <li class="linkandimages"><a href="mailto:rami.mhanna@powercoders.org">rami.mhanna@powercoders.org</a></li>
+            <li class="linkandimages"><a href="https://github.com/RamiMhanna/powercoders">https://github.com/RamiMhanna/powercoders</a></li>
+            <li class="linkandimages"><a href="https://www.linkedin.com/in/rami-mhanna-587444162/">https://www.linkedin.com/in/rami-mhanna-587444162/</a></li>
+            <li class="justimages"><a href="mailto:rami.mhanna@powercoders.org"><img class="images" src="github.png" alt="https://github.com/RamiMhanna/powercoders" title="Github - Rami Mhanna"></a></li>
+            <li class="justimages"><a href="https://github.com/RamiMhanna/powercoders"><img class="images" src="github.png" alt="https://github.com/RamiMhanna/powercoders" title="Github - Rami Mhanna"></a></li>
+            <li class="justimages"><a href="https://www.linkedin.com/in/rami-mhanna-587444162/"><img class="images" src="in.png" alt="https://www.linkedin.com/in/rami-mhanna-587444162/" title="LinkedIn - Rami Mhanna"></a></li>
           </ul>
         </div>
 
+        <div id="education">
+          <h2>Education</h2>
+
+          <ul>
+            <li><span class="fromtoyear">2005 - 2011</span><span class="educationallevel">Electronics Engineering and Telecommunication (Damascus University)</span> </li>
+          </ul>
+        </div>
+
+        <div id="courses">
+          <h2>Courses</h2>
+
+          <ul>
+            <li><span class="fromtoyear">10/2014 - 11/2014</span><span class="educationallevel">Automation systems and robots (Mitsubishi Electric - Jordan)</span> </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="col2">
         <div id="activities">
           <h2>Previous Activities</h2>
 
           <ul>
+            <li><span class="fromtoyear1">11/2018 - now</span><span class="jobtitle">Powercoders Participant (Basel - Switzerland)</span> </li>
             <li><span class="fromtoyear">07/2017 - 11/2018</span><span class="jobtitle">Pizzaria Lavita (Rothenburg - Lucern)</span> </li>
             <li><span class="fromtoyear">01/2015 - 09/2015</span><span class="jobtitle">Automation Engineer (Modern Beacon/Mitsubishi Partner in Jordan) and robots (Mitsubishi Electric -
                 Jordan)</span></li>
@@ -67,8 +88,58 @@
           <h2>Qualification</h2>
 
           <ul>
-            <li><span class="fromtoyear">09/2007 - 5/2008</span><span class="jobtitle">Lighting Technologist - Damascus University</span></li>
             <li><span class="fromtoyear">09/2009 - 5/2010</span><span class="jobtitle">Industrial Programming : PLC, Microcontroller - Damascus University</span></li>
+            <li><span class="fromtoyear">09/2007 - 5/2008</span><span class="jobtitle">Lighting Technologist - Damascus University</span></li>
+          </ul>
+        </div>
+
+        <div id="it_knowledge">
+          <h2>Computer Science Knowledge</h2>
+
+          <ul>
+            <li>Application of OS(windows)</li>
+            <li>Microsoft Office :
+              <ul class="office">
+                <li>Word</li>
+                <li>Excel</li>
+                <li>PowerPoint</li>
+                <li>Outlook</li>
+              </ul>
+            </li>
+            <li>Industrial Programming :
+              <ul class="industrial">
+                <li>PLC</li>
+                <li>HMI</li>
+                <li>Microcontroller</li>
+                <li>Arm Robot Controller</li>
+              </ul>
+            </li>
+            <li>Programming Languages :
+              <ul class="prg_lang">
+                <li>C</li>
+                <li>C++</li>
+                <li>C-Arduino</li>
+                <li>VB</li>
+              </ul>
+            </li>
+            <li>Script Languages :
+              <ul class="script">
+                <li>PHP</li>
+                <li>Python</li>
+                <li>Perl</li>
+                <li>JavaScript</li>
+              </ul>
+            </li>
+            <li>Markup Languages :
+              <ul>
+                <li>HTML</li>
+              </ul>
+            </li>
+            <li>Cascading Style Sheet (CSS)</li>
+            <li>Web Application Framework (Vue)</li>
+            <li>Runtime Environment (Node)</li>
+            <li>Database Language - Structured Query Language (SQL).</li>
+            <li>Version Control (Git and GitHub) and Project Management.</li>
           </ul>
         </div>
 
@@ -93,72 +164,7 @@
         </div>
       </div>
 
-      <div id="col2">
-        <div id="education">
-          <h2>Education</h2>
-
-          <ul>
-            <li><span class="fromtoyear">2005 - 2011</span><span class="educationallevel">Electronics Engineering and Telecommunication (Damascus University)</span> </li>
-            <li><span class="fromtoyear">2002 - 2004</span><span class="educationallevel">10. - 12. Class Secondery School(Ismaeel Al-Raies Damaskus)</span> </li>
-            <li><span class="fromtoyear">1999 - 2001</span><span class="educationallevel">7. &nbsp; - 9. &nbsp; Class Intermediate School(Ismaeel Al-Raies Damaskus)</span> </li>
-            <li><span class="fromtoyear">1993 - 1998</span><span class="educationallevel">1. &nbsp; - 6. &nbsp; Class Elementary School(Harasta Elementary School Damaskus)</span> </li>
-          </ul>
-        </div>
-
-        <div id="courses">
-          <h2>Courses</h2>
-
-          <ul>
-            <li><span class="fromtoyear">10/2014 - 11/2014</span><span class="educationallevel">Automation systems and robots (Mitsubishi Electric - Jordan)</span> </li>
-          </ul>
-        </div>
-
-        <div id="it_knowledge">
-          <h2>Computer Science Knowledge</h2>
-
-          <ul>
-            <li>Application of OS(windows)</li>
-            <li>Microsoft Office :
-              <ul>
-                <li>Word</li>
-                <li>Excel</li>
-                <li>PowerPoint</li>
-                <li>Outlook</li>
-              </ul>
-            </li>
-            <li>Industrial Programming :
-              <ul>
-                <li>PLC</li>
-                <li>HMI</li>
-                <li>Microcontroller</li>
-                <li>Arm Robot Controller</li>
-              </ul>
-            </li>
-            <li>Programming Languages :
-              <ul>
-                <li>C</li>
-                <li>C++</li>
-                <li>C-Arduino</li>
-                <li>VB</li>
-              </ul>
-            </li>
-            <li>Script Languages :
-              <ul>
-                <li>PHP</li>
-                <li>Python</li>
-                <li>Perl</li>
-                <li>JavaScript</li>
-              </ul>
-            </li>
-            <li>Markup Languages :
-              <ul>
-                <li>HTML</li>
-              </ul>
-            </li>
-            <li>Cascading Style Sheet (CSS)</li>
-          </ul>
-        </div>
-      </div>
+      <p class="uparrow"><a href="#">&uarr;</a></p>
     </div>
   </body>
 </html>

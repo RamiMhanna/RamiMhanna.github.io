@@ -1,0 +1,93 @@
+body {
+  font-size: 105%;
+}
+
+a {
+  color: dimgray;
+  text-decoration: none;
+  font-size: 80%;
+}
+.images{
+display: none;
+}
+
+#personal_information_btn, #it_knowledge_btn,
+#education_btn, #courses_btn, #activities_btn,
+#languages_btn, #qualification_btn {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+}
+img {
+    display: block;
+    float: right;
+}
+
+.fromtoyear {
+    padding-right: 2em;
+}
+
+
+.fromtoyear1 {
+    padding-right: 3.6em;
+}
+ul {
+    list-style: none;
+    padding-left: 10px;
+
+}
+
+h2 {
+  display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+    margin-bottom: 0;
+}
+
+#personal_information, #it_knowledge,
+#education, #courses, #activities,
+#languages, #qualification {
+    line-height: 22px;
+    margin-top: 0;
+}
+
+#qualification {
+    margin-bottom: 2em;
+}
+
+.script li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.prg_lang li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.office li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.industrial li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+#it_knowledge ul {
+    list-style: circle;
+    margin-bottom: 1em;
+}
+
+.me  {
+  padding: 0;
+  width: 200px;
+  height: 220px;
+  border-radius: 15px;
+  border: 0.1em solid black;
+}
