@@ -1,0 +1,9 @@
+.new_line{
+    color: maroon;
+    width: fit-content;
+    border: 1px outset cyan;
+    border-radius: 70px;
+    padding: 5px;
+    box-shadow: 2px 2px gray;
+}
+
