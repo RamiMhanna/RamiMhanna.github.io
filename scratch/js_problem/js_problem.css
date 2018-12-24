@@ -22,5 +22,5 @@
 }
 
 .warning::before, .tip::before {
-   font-weight: bold;
+  font-weight: bold;
 }

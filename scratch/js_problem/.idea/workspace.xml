@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1a6d8a4f-fec6-41ee-aefa-b7b3a2de9f16" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Cheatsheet/version_control.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cheatsheet/version_control.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cheatsheet/version_control.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cheatsheet/version_control.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portfolio/larg.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../portfolio/larg.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portfolio/me.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../portfolio/space.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../recipes/recipe1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../recipes/recipe1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../recipes/recipe2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../recipes/recipe2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../recipes/recipe3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../recipes/recipe3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../recipes/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../recipes/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3column/3column.css" beforeDir="false" afterPath="$PROJECT_DIR$/../3column/3column.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/breadcrumb.css" beforeDir="false" afterPath="$PROJECT_DIR$/../display/breadcrumb.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/breadcrumb.html" beforeDir="false" afterPath="$PROJECT_DIR$/../display/breadcrumb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/display.html" beforeDir="false" afterPath="$PROJECT_DIR$/../display/display.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js_add_p/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../js_add_p/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js_problem.css" beforeDir="false" afterPath="$PROJECT_DIR$/js_problem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js_problem.html" beforeDir="false" afterPath="$PROJECT_DIR$/js_problem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setClass.js" beforeDir="false" afterPath="$PROJECT_DIR$/setClass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../position/position.css" beforeDir="false" afterPath="$PROJECT_DIR$/../position/position.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../position/position.html" beforeDir="false" afterPath="$PROJECT_DIR$/../position/position.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../powercoderslogo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../teamofpowercoders.jpg" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="js_problem" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js_problem.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js_problem.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/setClass.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="726">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/js_problem.css" />
+        <option value="$PROJECT_DIR$/js_problem.html" />
+        <option value="$PROJECT_DIR$/setClass.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="16" />
+    <option name="y" value="34" />
+    <option name="width" value="2126" />
+    <option name="height" value="1302" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="js_problem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js_problem" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="js_problem.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/js_problem/js_problem.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.js_problem.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a6d8a4f-fec6-41ee-aefa-b7b3a2de9f16" name="Default Changelist" comment="" />
+      <created>1545034985148</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1545034985148</updated>
+      <workItem from="1545034988880" duration="3082000" />
+      <workItem from="1545123867789" duration="1452000" />
+      <workItem from="1545293025134" duration="10284000" />
+      <workItem from="1545405978841" duration="646000" />
+      <workItem from="1545603950445" duration="119000" />
+      <workItem from="1545694148058" duration="54000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="15637000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-6" y="-6" width="1093" height="693" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.496997" visible="true" weight="0.21475875" />
+      <window_info id="Structure" order="1" sideWeight="0.503003" side_tool="true" weight="0.24257426" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.32920793" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39786857" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32882884" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32882884" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32882884" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js_problem.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js_problem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setClass.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
