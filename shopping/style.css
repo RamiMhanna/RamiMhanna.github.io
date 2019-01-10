@@ -1,7 +1,23 @@
+.hide {
+  display: none;
+}
+
+
+
+input .hide {
+  width: 5em;
+  margin-right: 2em;
+}
+
+
 span {
   margin-right: 2em;
 }
 
 li {
   margin-bottom: 1em;
+}
+#item {
+  width: 12em;
+  margin-right: 2em;
 }

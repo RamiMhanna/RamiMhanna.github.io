@@ -1,23 +1,47 @@
-// create a new list element
+// Create a new list element.
 function createNewListItem(newItem) {
-  // check if the newItem is  empty
+  // Check if the newItem is  empty.
   if ((newItem === '')) {
     return null;
   }
-  // if the newItem is not empty
+  // If the newItem is not empty.
   else {
+    // Add a new item.
     let li = document.createElement('li');
     let span = document.createElement('span');
     span.innerText = newItem;
     li.appendChild(span);
-    let button = document.createElement('button');
-    // Remove the list element if the delete button is clicked
-    button.addEventListener('click', function () {
-      li.remove();
+    // Adding an input element to the li and hide it ,in case we wanted to change the value.
+    let input = document.createElement('input');
+    li.appendChild(input);
+    input.className = 'hide ';
+
+    // Check if the list item is clicked and switch it to input box to edit its value.
+    span.addEventListener('click', function () {
+      input.className = '';
+      span.className = 'hide';
+      input.focus();
+      input.value = span.innerText;
+      input.setSelectionRange(0, input.value.length);
     });
-    let buttonText = document.createTextNode('delete');
-    button.appendChild(buttonText);
-    li.appendChild(button);
+    // After editing the Value , if the key Enter is pressed switch the input box to the span element(list item).
+    input.addEventListener('keypress', change);
+
+    function change(event) {
+      console.log(event.which);
+      if (event.which === 13) {
+        // If the new value is not empty, then switch.
+        if (input.value !== '') {
+          input.previousElementSibling.innerText = input.value;
+          input.className = 'hide';
+          span.className = '';
+          // If the new Value is empty, then delete the list item.
+        } else {
+          this.parentElement.remove();
+        }
+      }
+    }
+
     return li;
   }
 }
