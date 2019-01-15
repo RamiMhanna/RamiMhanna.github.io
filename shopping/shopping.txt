@@ -67,3 +67,71 @@ line 21: the /}/ used to  close the anonymous function which is declared inside 
 the /)/used to close the paranthes of the addEventListner() method in /line 06/  
 
 
+
+line 23: we add here an event listener to listen to the mouseclick if there is a click or not . if there is, then we execute what is inside the anonymous function().
+
+
+
+line 24: we create /declare/ a variable called trimmedvalue by the keyword /const/ and assign to it the trimmed  value of the element that is saved inside the variable /item/, and we trimmed this value by the method /trim()/ which clear all the whitespaces after and before the value, because we don't want to add an item with multiple spaces in it or an empty item.
+
+
+
+line 26: here we have to add a list element to the unordered list that we have in the HTML. and for that we create a new list element with the function that we created it in the /Line 45/, so we call the function createNewListItem() and pass the trimmed value of the input box to it as parameter, and as the /line 58/ this function return a li element, and we connect the li to the ul with the method /appendChild()/.
+
+
+
+line 27: here we want clear the value that is written in the input box because after adding the item that is written in the input box we want to make the box ready for the next item.
+
+
+
+line 28: after adding the item to the unordered list that we make, we want to disable the add's button after clearing the box.
+so for that, we use property disable for the add's button that is saved in variable /btn/ and assign to it the value true.
+
+
+
+line 29: set vthe focuse at the element /inputbox/ here is saved to the variable /item/ and the input element heighlighted and ready to add values to it .
+
+line 30: the /}/ used to  close the anonymous function which is declared inside the addEventListner arrguments in /line 23/,
+the /)/used to close the paranthes of the addEventListner() method in /line 23/.
+
+line 31: after adding the item to the unordered list that we make, we want to disable the add's button after clearing the box.
+so for that, we use property disable for the add's button that is saved in variable /btn/ and assign to it the value true.
+
+
+
+line 32: 
+
+
+set vthe focuse at the element /inputbox/ here is saved to the variable /item/ and the input element highlighted and ready to add values to it .
+
+line 33:  the /}/ used to  close the anonymous function which is declared inside the addEventListner arrguments in /line 01/,
+the /)/used to close the paranthes of the addEventListner() method in /line 01/.
+
+line 45: here we declare a function to use it inside our javascript code, and this function create a list element and add to it a text content and delete button also, this function take /deals with/ one arrgument which is the text that comes from the input box .
+
+line 46: declare a variable called /li/ to contain the /list element/ that we create it .
+
+line 47: declare a variable called /span/ to contain the /span element/ that we create it .
+
+line 48: declare a variable called /deleteBox/ to contain the /button element/ that we create it .
+
+line 50: we add here an event listener to listen to the mouseclick if there is a click or not on the delete button  . if there is, then we execute what is inside the anonymous function().
+
+
+
+line 51: if  we clicked on  delete button then we have  to remove the /li/ that have this delete button, anmd we do that by delete the /Li/ by the methde /remove()/.
+
+line 52: the /}/ used to  close the anonymous function which is declared inside the addEventListner arrguments in /line 50/,
+the /)/used to close the paranthes of the addEventListner() method in /line 50/.
+
+line 54: inside the li that we created , we will create a span to contain the text value that we enter it, and we do that by adding the /newItem/ received from the input box and assign it to the /innerText/ propertiy of the span.
+
+line 55: now here  we have created the /li/ element and the /span/ element but till now they are not connected , so we connect them togother by the method /appendChilde()/ and the span element is a child of the li element .
+
+line 56: inside the li that we created , we will create a button to delete the value that we enter it, so first we assign the text /delete(optional)/to  the /innerText/ propertiy of the deleteBox .
+
+line 57: now here  we have created the /li/ element and the /delete - button/ element but till now they are not connected , so we connect them togother by the method /appendChilde()/ and the delete-button element is a child of the li element .
+
+line 58: after calling the faunction createNewListItem() then this function will return for us the Element that it has created wich is /Li/ element, to use it in other places in our code.
+
+line 59: /}/ closing the function body that opend in line 45.
