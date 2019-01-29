@@ -1,3 +1,8 @@
+body {
+  border: 1px solid green;
+  width: 450px;
+}
+
 .header {
   background-image: url("background_shopping.jpg");
   background-repeat: no-repeat;
@@ -6,7 +11,13 @@
   margin: 0 auto;
 }
 
-.container {
+h1 {
+  text-align: center;
+  margin-block-start: 0;
+  padding-top: 0.7em;
+}
+
+#container {
   border: 1px solid gray;
   box-shadow: 1px 1px lightgrey;
   border-radius: 3px;
@@ -17,43 +28,13 @@
   background-color: rgba(255, 238, 212, 0.53);
 }
 
-ul {
-
-padding-inline-start: 0;
-}
-
-.hidden {
-  display: none;
-}
-
-li {
-  padding: 1px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-column-gap: 20px;
-  border: 1px solid green;
-  width: 250px;
-  margin: 0 auto;
-  margin-bottom: 1em;
-}
-
-li span {
-margin-left: 5px;
-}
-
-h1 {
-  text-align: center;
-  margin-block-start: 0;
-  padding-top: 0.7em;
-}
-
-span {
-  margin-right: 2em;
-}
-
 #item {
-  width: 12em;
-  margin-right: 2em;
+  width: 10em;
+  margin-right: .5em;
+}
+
+#quantity {
+  width: 3.8em;
 }
 
 .container button {
@@ -61,8 +42,21 @@ span {
   border-radius: 5px;
 }
 
-body {
-  border: 1px solid green;
-  width: 450px;
+ul {
+  padding-inline-start: 0;
 }
 
+li {
+  padding: 1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  width: 230px;
+  margin: .5em 1em 2em 1em;
+}
+.li button {
+  grid-column: 3 / 5;
+}
+.hidden {
+  display: none;
+}
