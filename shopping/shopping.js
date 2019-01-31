@@ -11,6 +11,7 @@ function domContentLoaded() {
   const deleteAll = document.getElementById('delAll');
   const quantity = document.getElementById('quantity');
   const container = document.getElementById('container');
+
   deleteAll.className = 'hidden';
 
   deleteAll.addEventListener('click', function () {
@@ -33,7 +34,12 @@ function domContentLoaded() {
         return;
       }
 
-      ul.appendChild(createNewListItem(trimmedvalue, quantity.value.trim()));
+      const product = {
+        name:trimmedvalue,
+        quantity:quantity.value.trim(),
+      };
+
+      ul.appendChild(createNewListItem(product));
       quantity.value = '';
       item.value = '';
       btn.disabled = true;
@@ -44,7 +50,12 @@ function domContentLoaded() {
   btn.addEventListener('click', function () {
     const trimmedvalue = item.value.trim();
 
-    ul.appendChild(createNewListItem(trimmedvalue, quantity.value.trim()));
+    const product = {
+      name: trimmedvalue,
+      quantity: quantity.value.trim(),
+    };
+
+    ul.appendChild(createNewListItem(product));
     quantity.value = '';
     item.value = '';
     btn.disabled = true;
@@ -63,17 +74,15 @@ if (document.readyState === 'loading') {
 } else {
   domContentLoaded();
 }
-
 /**
  * create and return an 'li' element for inclusion in shopping list.
  *
  * the li element that is returned has the structure :
  * '&lt;li><span>itemName</span> <button>Delete</button></li>'.
- * @param {string} quantity of the item that we want to add it.
- * @param {string} newItem name of the item to add to the list.
- * @returns {HTMLElement} li element.
+ * @param {{name : string, quantity : string}} product , The Item to append yo the list.
+ * @returns {HTMLElement} li element
  */
-function createNewListItem(newItem, quantity) {
+function createNewListItem(product) {
   const li = document.createElement('li');
   const span = document.createElement('span');
   const deleteBox = document.createElement('button');
@@ -83,12 +92,12 @@ function createNewListItem(newItem, quantity) {
     hideDelBtn();
   });
 
-  span.innerText = newItem;
+  span.innerText = product.name;
   li.appendChild(span);
 
-  if (quantity !== "") {
+  if (product.quantity !== "") {
     const amount = document.createElement('span');
-    const qty = document.createTextNode(`( ${quantity} )`);
+    const qty = document.createTextNode(`( ${product.quantity} )`);
     amount.appendChild(qty);
     li.appendChild(amount);
   }
