@@ -22,7 +22,7 @@ function domContentLoaded() {
     item.focus();
   });
   container.addEventListener('keyup', function (event) {
-    if (event.target.nodeName === 'input') {
+    if (event.target.localName === 'input') {
       const trimmedvalue = item.value.trim();
       btn.disabled = item.value.trim() === '';
 
@@ -35,7 +35,7 @@ function domContentLoaded() {
       }
       const product = new ShoppingListItem(trimmedvalue, quantity.value.trim());
 
-      ul.appendChild(createNewListItem(product));
+      ul.appendChild(product.toListItem());
       quantity.value = '';
       item.value = '';
       btn.disabled = true;
@@ -49,7 +49,7 @@ function domContentLoaded() {
     const product = new ShoppingListItem(trimmedvalue, quantity.value.trim());
 
 
-    ul.appendChild(createNewListItem(product));
+    ul.appendChild(product.toListItem());
     quantity.value = '';
     item.value = '';
     btn.disabled = true;
@@ -76,10 +76,35 @@ if (document.readyState === 'loading') {
  * @param  {string} quantity  of the item.
  * @constructor
  */
-function ShoppingListItem(name, quantity){
+function ShoppingListItem(name, quantity) {
   this.name = name;
   this.quantity = quantity;
+  this.toListItem = function () {
+    const li = document.createElement('li');
+    const span = document.createElement('span');
+    const deleteBox = document.createElement('button');
+
+    deleteBox.addEventListener('click', function () {
+      li.remove();
+      hideDelBtn();
+    });
+
+    span.innerText = this.name;
+    li.appendChild(span);
+
+    if (this.quantity !== "") {
+      const amount = document.createElement('span');
+      const qty = document.createTextNode(`( ${this.quantity} )`);
+      amount.appendChild(qty);
+      li.appendChild(amount);
+    }
+
+    deleteBox.innerText = 'Delete';
+    li.appendChild(deleteBox);
+    return li;
+  };
 }
+
 
 /**
  * create and return an 'li' element for inclusion in shopping list.
@@ -90,30 +115,30 @@ function ShoppingListItem(name, quantity){
  * @returns {HTMLElement} li element
  */
 
-function createNewListItem(product) {
-  const li = document.createElement('li');
-  const span = document.createElement('span');
-  const deleteBox = document.createElement('button');
-
-  deleteBox.addEventListener('click', function () {
-    li.remove();
-    hideDelBtn();
-  });
-
-  span.innerText = product.name;
-  li.appendChild(span);
-
-  if (product.quantity !== "") {
-    const amount = document.createElement('span');
-    const qty = document.createTextNode(`( ${product.quantity} )`);
-    amount.appendChild(qty);
-    li.appendChild(amount);
-  }
-
-  deleteBox.innerText = 'Delete';
-  li.appendChild(deleteBox);
-  return li;
-}
+// function createNewListItem(product) {
+//   const li = document.createElement('li');
+//   const span = document.createElement('span');
+//   const deleteBox = document.createElement('button');
+//
+//   deleteBox.addEventListener('click', function () {
+//     li.remove();
+//     hideDelBtn();
+//   });
+//
+//   span.innerText = product.name;
+//   li.appendChild(span);
+//
+//   if (product.quantity !== "") {
+//     const amount = document.createElement('span');
+//     const qty = document.createTextNode(`( ${product.quantity} )`);
+//     amount.appendChild(qty);
+//     li.appendChild(amount);
+//   }
+//
+//   deleteBox.innerText = 'Delete';
+//   li.appendChild(deleteBox);
+//   return li;
+// }
 
 /**
  * Hide the button that Delete all the list elements in the Shopping List.
