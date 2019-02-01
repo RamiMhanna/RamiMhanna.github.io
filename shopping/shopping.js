@@ -22,7 +22,7 @@ function domContentLoaded() {
     item.focus();
   });
   container.addEventListener('keyup', function (event) {
-    if (event.target.localName === 'input') {
+    if (event.target.nodeName === 'input') {
       const trimmedvalue = item.value.trim();
       btn.disabled = item.value.trim() === '';
 
@@ -33,11 +33,7 @@ function domContentLoaded() {
       if (event.key !== 'Enter') {
         return;
       }
-
-      const product = {
-        name:trimmedvalue,
-        quantity:quantity.value.trim(),
-      };
+      const product = new ShoppingListItem(trimmedvalue, quantity.value.trim());
 
       ul.appendChild(createNewListItem(product));
       quantity.value = '';
@@ -50,10 +46,8 @@ function domContentLoaded() {
   btn.addEventListener('click', function () {
     const trimmedvalue = item.value.trim();
 
-    const product = {
-      name: trimmedvalue,
-      quantity: quantity.value.trim(),
-    };
+    const product = new ShoppingListItem(trimmedvalue, quantity.value.trim());
+
 
     ul.appendChild(createNewListItem(product));
     quantity.value = '';
@@ -74,14 +68,28 @@ if (document.readyState === 'loading') {
 } else {
   domContentLoaded();
 }
+
+/**
+ * Represents an item in the shopping list.
+ *
+ * @param  {string} name  name of the item.
+ * @param  {string} quantity  of the item.
+ * @constructor
+ */
+function ShoppingListItem(name, quantity){
+  this.name = name;
+  this.quantity = quantity;
+}
+
 /**
  * create and return an 'li' element for inclusion in shopping list.
  *
  * the li element that is returned has the structure :
  * '&lt;li><span>itemName</span> <button>Delete</button></li>'.
- * @param {{name : string, quantity : string}} product , The Item to append yo the list.
+ * @param {ShoppingListItem} product , The Item to append yo the list.
  * @returns {HTMLElement} li element
  */
+
 function createNewListItem(product) {
   const li = document.createElement('li');
   const span = document.createElement('span');
