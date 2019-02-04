@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Shopping list</title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/mobile.css" type="text/css" media="screen and (min-width: 426px)">
+    <link rel="stylesheet" href="../css/tablet.css" type="text/css" media="screen and (min-width: 769px)">
+    <script src="../js/shopping-list-item.js" defer></script>
+    <script src="../js/view.js" defer></script>
+    <script src="../js/model.js" defer></script>
+    <script src="../js/controller.js" defer></script>
+    <script src="../js/ui.js" defer></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>My Shopping List</h1>
+    </div>
+
+    <div id="container">
+      <label for="item">Enter a new Item :</label>
+
+      <input type="text" id="quantity" placeholder="Quantity" maxlength="10" min="1">
+
+      <input type="text" id="item" placeholder="Type something to buy" maxlength="14">
+
+      <button>Click me</button>
+
+      <ul>
+        <!-- Unordered List , the list element will be added and removed here -->
+      </ul>
+      <button id="delAll">Delete all</button>
+    </div>
+  </body>
+</html>
