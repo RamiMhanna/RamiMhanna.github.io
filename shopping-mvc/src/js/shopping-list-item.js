@@ -24,11 +24,6 @@ class ShoppingListItem {
     const span = document.createElement('span');
     const deleteBox = document.createElement('button');
 
-    deleteBox.addEventListener('click', function () {
-      li.remove();
-      hideDelBtn();
-    });
-
     span.innerText = this.name;
     li.appendChild(span);
 
